@@ -1,0 +1,50 @@
+@media  (min-width: 1440px){
+  body {
+    min-width: 1400px;
+    div.container,
+    section.container,
+    article.container{
+      width: 1400px;
+      [class*="g"]{
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+      .g1{
+        width:80px;
+      }
+      .g2{
+        width:200px;
+      }
+      .g3{
+        width:320px;
+      }
+      .g4{
+        width:440px;
+      }
+      .g5{
+        width:560px;
+      }
+      .g6{
+        width:680px;
+      }
+      .g7{
+        width:800px;
+      }
+      .g8{
+        width:920px;
+      }
+      .g9{
+        width:1040px;
+      }
+      .g10{
+        width:1160px;
+      }
+      .g11{
+        width:1280px;
+      }
+      .g12{
+        width:1400px;
+      }
+    }
+  }
+}
