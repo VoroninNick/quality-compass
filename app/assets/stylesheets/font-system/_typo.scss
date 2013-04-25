@@ -1,6 +1,26 @@
+*{
+  -webkit-font-smoothing: antialiased;
+
+  &:after{
+    -webkit-font-smoothing: antialiased;
+  }
+
+  &:before{
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+::selection{
+  background: #dc0055;
+  color: white;
+  text-shadow: 0 0 0;
+  text-decoration: none;
+}
+
 html, body{
   font-size: 1em;
   line-height: 1.5;
+  font-family: 'Open Sans', sans-serif;
 }
 h1,.h1{
   font-size:32px;
@@ -76,7 +96,7 @@ h6,.h6{
 @media  (min-width: 1600px){
   html, body{
     font-size: 1.1em;
-    line-height: 1.8;
+    line-height: 1.4;
   }
   h1,.h1{
     font-size:36px;
@@ -108,7 +128,7 @@ h6,.h6{
 @media  (min-width: 1920px){
   html, body{
     font-size: 1.1em;
-    line-height: 1.8;
+    line-height: 1.4;
   }
   h1,.h1{
     font-size:36px;
