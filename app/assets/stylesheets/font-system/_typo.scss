@@ -18,8 +18,8 @@
 }
 
 html, body{
-  font-size: 1em;
-  line-height: 1.5;
+  font-size: 14px;
+  line-height: 20px;
   font-family: 'Open Sans', sans-serif;
 }
 h1,.h1{
@@ -49,86 +49,22 @@ h6,.h6{
 
 @media  (min-width: 960px){
   html, body{
-    font-size: 1em;
-    line-height: 1.5;
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 
 @media  (min-width: 1200px){
   html, body{
-    font-size: 1em;
-    line-height: 1.5;
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 
 @media  (min-width: 1440px){
   html, body{
-    font-size: 1em;
-    line-height: 1.5;
-  }
-  h1,.h1{
-    font-size:36px;
-    line-height:1.5;    /* 48px */
-  }
-  h2,.h2{
-    font-size:1.6em;    /* 24px */
-    line-height:1;      /* 24px */
-  }
-  h3,.h3{
-    font-size:24px;
-    line-height:1.2;    /* 24px */
-  }
-  h4,.h4{
-    font-size:22px;
-    line-height:1.333;  /* 24px */
-  }
-  h5,.h5{
-    font-size:18px;
-    font-size:1rem;     /* 16px */
-    line-height:1.5;    /* 24px */
-  }
-  h6,.h6{
-    font-size:16px;
-    line-height:1.5;    /* 24px */
-  }
-}
-
-@media  (min-width: 1600px){
-  html, body{
-    font-size: 1.1em;
-    line-height: 1.4;
-  }
-  h1,.h1{
-    font-size:36px;
-    line-height:1.5;    /* 48px */
-  }
-  h2,.h2{
-    font-size:1.6em;    /* 24px */
-    line-height:1;      /* 24px */
-  }
-  h3,.h3{
-    font-size:24px;
-    line-height:1.2;    /* 24px */
-  }
-  h4,.h4{
-    font-size:22px;
-    line-height:1.333;  /* 24px */
-  }
-  h5,.h5{
-    font-size:18px;
-    font-size:1rem;     /* 16px */
-    line-height:1.5;    /* 24px */
-  }
-  h6,.h6{
-    font-size:16px;
-    line-height:1.5;    /* 24px */
-  }
-}
-
-@media  (min-width: 1920px){
-  html, body{
-    font-size: 1.1em;
-    line-height: 1.4;
+    font-size: 16px;
+    line-height: 24px;
   }
   h1,.h1{
     font-size:36px;
