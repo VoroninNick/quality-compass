@@ -130,6 +130,11 @@
               background: url('li-visited.jpg') repeat-x #dc0055;
               border-left: 1px solid #fffeff;
               border-right: 1px solid #fffeff;
+              border-bottom: 1px solid rgba(255, 255, 255, 0);
+              text-shadow: 0 0 0;
+              color: #fff;
+              font-weight: 600;
+              font-size: 1.2em;
               a{
                 border-bottom: 1px solid rgba(255, 255, 255, 0);
                 text-shadow: 0 0 0;
@@ -163,10 +168,10 @@
                 padding: 0 1.5em;
               }
               @media  (min-width: 1200px){
-
+                padding: 0 2em;
               }
               @media  (min-width: 1440px){
-
+                padding: 0 2.5em;
               }
               @media  (min-width: 1600px){
 
@@ -180,6 +185,7 @@
                 color: #878787;
                 text-shadow: 0 1px 0 rgba(255,255,255,.75);
                 font-weight: 600;
+                font-size: 1.2em;
 
                 -webkit-transition: 0s ease-in all;
                 -moz-transition: 0s ease-in all;
