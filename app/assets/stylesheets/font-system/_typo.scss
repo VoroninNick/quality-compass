@@ -1,5 +1,7 @@
 *{
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-hyphens: auto;
 
   &:after{
     -webkit-font-smoothing: antialiased;
@@ -9,12 +11,30 @@
     -webkit-font-smoothing: antialiased;
   }
 }
-
+input[type="password"] {
+  -webkit-text-security: square;
+}
+img{
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic;
+}
+@mixin text-render{
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -webkit-hyphenate-character: "\2010";
+  -webkit-hyphenate-limit-after: 1;
+  -webkit-hyphenate-limit-before: 3;
+  -moz-hyphens: auto;
+  overflow-wrap: hyphenate;
+}
 ::selection{
   background: #dc0055;
   color: white;
   text-shadow: 0 0 0;
   text-decoration: none;
+  -webkit-font-smoothing: none;
+  font-size: 150%;
 }
 
 ::-moz-selection{
@@ -25,8 +45,8 @@
 }
 
 html, body{
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 16px;
+  line-height: 24px;
   font-family: 'Open Sans', sans-serif;
 }
 h1,.h1{
@@ -56,15 +76,15 @@ h6,.h6{
 
 @media  (min-width: 960px){
   html, body{
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
 @media  (min-width: 1200px){
   html, body{
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
