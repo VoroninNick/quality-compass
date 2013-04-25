@@ -1,4 +1,6 @@
+@media screen and (min-width: 1px) and (max-width: 959px){
 body {
+  min-width: 480px !important;
   div.container,
   section.container,
   article.container{
@@ -46,4 +48,5 @@ body {
       width:98.0%;
     }
   }
+}
 }
