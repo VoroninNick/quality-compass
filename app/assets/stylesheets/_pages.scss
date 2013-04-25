@@ -1,0 +1,42 @@
+#main-render{
+  #index-render{
+    margin-top: $block-margins;
+    .ip-item{
+      h2{
+        color: #db0055;
+        margin-bottom: 1em;
+      }
+      p{
+        color: #585858;
+        font-weight: 300;
+        margin-top: 1em;
+      }
+      img{
+        max-width: 100%;
+        width: inherit;
+        border: 4px solid #fffeff;
+        height: auto;
+        vertical-align: middle;
+        -ms-interpolation-mode: bicubic;
+
+        -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+
+  #index-render-intro{
+    margin-top: $block-margins;
+    .im-descr-section{
+
+    }
+    .descr-section{
+      p{
+        color: #585858;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
