@@ -4,6 +4,7 @@
   <title><%= yield :title %></title>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords" content="<%= yield :meta_keywords %>" />
   <meta name="description" content="<%= yield :meta_description %>" />
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
@@ -27,7 +28,7 @@
       <div class="g9 navigation-block">
         <nav>
           <ul>
-            <li <% if current_page?(about_path) %> class="visited" <% end %>><%= link_to 'Про нас', about_path, :title => 'Про нас' %></li>
+            <li <% if current_page?(about_path) %> class="visited" <% end %>><%= link_to_unless current_page?(about_path), 'Про нас', about_path, :title => 'Про нас' %></li>
             <li><%= link_to 'Публікації', '#' %></li>
             <li><%= link_to 'Університети', '#' %></li>
             <li><%= link_to 'Студентам', '#' %></li>
