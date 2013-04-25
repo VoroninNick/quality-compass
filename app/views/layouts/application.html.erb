@@ -4,10 +4,11 @@
   <title><%= yield :title %></title>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords" content="<%= yield :meta_keywords %>" />
   <meta name="description" content="<%= yield :meta_description %>" />
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Bad+Script&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Neucha&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -24,10 +25,12 @@
       <div class="g3" id="logotype">
         <%= link_to_unless current_page?(root_path), image_tag('logo.png', :alt => 'ТзОВ «Перспектива»'), root_path %>
       </div>
+      <div class="g-custom-mobile-menu">
+      </div>
       <div class="g9 navigation-block">
         <nav>
           <ul>
-            <li <% if current_page?(about_path) %> class="visited" <% end %>><%= link_to 'Про нас', about_path, :title => 'Про нас' %></li>
+            <li <% if current_page?(about_path) %> class="visited" <% end %>><%= link_to_unless current_page?(about_path), 'Про нас', about_path, :title => 'Про нас' %></li>
             <li><%= link_to 'Публікації', '#' %></li>
             <li><%= link_to 'Університети', '#' %></li>
             <li><%= link_to 'Студентам', '#' %></li>
@@ -55,7 +58,8 @@
 <div id="main-footer" class="clearfix">
   <div class="container">
     <div class="g4 mf-item-block">
-
+      <p class="copyrights">© 2012 ТзОВ «Перспектива»</p>
+      <p class="copyrights-studio">Зроблено дизайн студією Миколи Вороніна <br> в 2013р. Інформація про сайт</p>
     </div>
   </div>
 </div>

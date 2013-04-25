@@ -13,3 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+$(document).ready(function() {
+    $('.g-custom-mobile-menu').click(function(){
+        $('.navigation-block').slideToggle();
+    });
+});

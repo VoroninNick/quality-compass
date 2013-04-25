@@ -1,5 +1,6 @@
 $block-margins: 40px;
 $block-footer-margins: 60px;
+$text-block-antialaising: subpixel-antialiased;
 @import "media-grid/normalize_browsers";
 @import "media-grid/init_grid_system";
 

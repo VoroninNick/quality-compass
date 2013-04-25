@@ -2,22 +2,43 @@
   #index-render{
     margin-top: $block-margins;
     .ip-item{
+      @media (min-width: 1px) and (max-width: 720px) {
+        width: 98.0%;
+        margin-bottom: 1.5em;
+      }
       h2{
         color: #db0055;
         margin-bottom: 1em;
+        font-family: 'Neucha', cursive;
+
+        @media (min-width: 1px) and (max-width: 959px)  {
+          height: 50px;
+          margin-bottom: 0;
+        }
       }
       p{
         color: #585858;
         font-weight: 300;
         margin-top: 1em;
+        -webkit-font-smoothing: $text-block-antialaising;
+        @media  (min-width: 960px){
+          @include text-render;
+        }
+        @media  (min-width: 1200px) and (max-width: 1920px){
+          @include text-render;
+        }
+        @media  (min-width: 1px) and (max-width: 959px){
+
+        }
       }
       img{
         max-width: 100%;
         width: inherit;
         border: 4px solid #fffeff;
         height: auto;
-        vertical-align: middle;
-        -ms-interpolation-mode: bicubic;
+        @media (min-width: 1px) and (max-width: 959px) {
+          width: 100%;
+        }
 
         -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
         -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
@@ -26,17 +47,206 @@
     }
   }
 
+  #index-render-shadow{
+    height: 50px;
+    width: 100%;
+    margin: 0 auto;
+    background: url('index.-render-shadow.jpg') no-repeat transparent center;
+  }
+
   #index-render-intro{
     margin-top: $block-margins;
     .im-descr-section{
+      @media (min-width: 1px) and (max-width: 720px) {
+        width: 98.0%;
+        margin-bottom: 1.5em;
+      }
+      text-align: center;
 
+      img{
+        max-width: 100%;
+
+      }
+      p{
+        width: 50%;
+        margin: 0 auto;
+
+        color: #585858;
+        font-weight: 300;
+        -webkit-font-smoothing: $text-block-antialaising;
+        @media  (min-width: 960px){
+          @include text-render;
+        }
+        @media  (min-width: 1200px) and (max-width: 1920px){
+          @include text-render;
+        }
+        @media  (min-width: 1px) and (max-width: 959px){
+
+        }
+        @media (min-width: 1px) and (max-width: 720px) {
+          width: 98.0%;
+          margin-bottom: 1.5em;
+        }
+      }
     }
     .descr-section{
+      margin: 2em 0;
+      @media (min-width: 1px) and (max-width: 720px) {
+        width: 98.0%;
+        margin-bottom: 1.5em;
+      }
       p{
         color: #585858;
         font-weight: 300;
+        -webkit-font-smoothing: $text-block-antialaising;
+        @media  (min-width: 960px){
+          @include text-render;
+        }
+        @media  (min-width: 1200px) and (max-width: 1920px){
+          @include text-render;
+        }
+        @media  (min-width: 1px) and (max-width: 959px){
+
+        }
       }
     }
   }
+
+  #index-render-about-wrapper{
+    margin-top: $block-margins;
+    background: url('ir-article-bg.jpg') repeat transparent;
+    border-top: 1px solid #f9d4e2;
+    border-bottom: 1px solid #f9d4e2;
+    padding-bottom: 50px;
+    #index-render-about{
+      .g12{
+        h2{
+          color: rgb(219, 0, 85);
+          margin-top: 1em;
+          margin-bottom: 0;
+          font-family: 'Neucha', cursive;
+        }
+      }
+      .ir-about-item{
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+        @media (min-width: 1px) and (max-width: 720px) {
+          width: 98.0%;
+          margin-bottom: 1.5em;
+        }
+
+        .avatar{
+          float: left;
+          width: 30%;
+          margin-right: 1%;
+          @media (min-width: 1px) and (max-width: 720px) {
+            width: 100%;
+            margin-bottom: 1em;
+          }
+          img{
+            max-width: 100%;
+            width: 100%;
+          }
+          a{
+            text-decoration: none;
+            &:hover{
+              text-decoration: none;
+            }
+          }
+        }
+
+        .ai-description{
+          float: left;
+          width: 69%;
+          @media (min-width: 1px) and (max-width: 720px) {
+            width: 100%;
+          }
+          h3{
+            color: #868686;
+            font-family: 'Neucha', cursive;
+            a{
+              color: inherit;
+              font-family: inherit;
+              text-decoration: none;
+              border-bottom: 1px solid rgba(134, 134, 134, 0);
+              -webkit-transition: 0.5s ease-in all;
+              -moz-transition: 0.5s ease-in all;
+              -ms-transition: 0.5s ease-in all;
+              -o-transition: 0.5s ease-in all;
+              transition: 0.5s ease-in all;
+              &:hover{
+                border-bottom: 1px solid rgba(134, 134, 134, 1);
+              }
+            }
+          }
+          p{
+            color: #878787;
+            font-weight: 300;
+            -webkit-font-smoothing: $text-block-antialaising;
+            @media  (min-width: 960px){
+              @include text-render;
+            }
+            @media  (min-width: 1200px) and (max-width: 1920px){
+              @include text-render;
+            }
+            @media  (min-width: 1px) and (max-width: 959px){
+
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #index-render-feedback{
+    margin-top: $block-margins;
+    .g12{
+      h2{
+        color: rgb(219, 0, 85);
+        margin-top: 1em;
+        margin-bottom: 1.5em;
+        font-family: 'Neucha', cursive;
+      }
+    }
+    .ir-feedback-item{
+      text-align: center;
+      cursor: pointer;
+      @media (min-width: 1px) and (max-width: 479px) {
+        width:48.0%;
+        margin-bottom: 1.5em;
+      }
+      @media (min-width: 480px) and (max-width: 720px) {
+        width:31.333%;
+        margin-bottom: 1.5em;
+      }
+      img{
+        width: 100%;
+        max-width: 100%;
+        border-radius: 100px;
+      }
+      h3{
+          color: rgb(219, 0, 85);
+          font-family: 'Neucha', cursive;
+          margin-top: 1em;
+      }
+      p{
+          color: #878787;
+          font-weight: 700;
+          -webkit-font-smoothing: $text-block-antialaising;
+          text-align: center !important;
+          font-size: 125%;
+          @media  (min-width: 960px){
+            @include text-render;
+          }
+          @media  (min-width: 1200px) and (max-width: 1920px){
+            @include text-render;
+          }
+          @media  (min-width: 1px) and (max-width: 959px){
+
+          }
+      }
+    }
+  }
+
 }
 
