@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-UniAbroad::Application.load_tasks
+Qualitycompass::Application.load_tasks

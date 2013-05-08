@@ -11,10 +11,8 @@ gem 'jquery-ui-rails'
 gem 'rails-i18n'
 gem 'russian'
 gem 'paperclip'
-gem 'mobile-fu'
-gem 'browser'
 gem 'ckeditor'
-gem 'google-webfonts'
+gem 'rename'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
