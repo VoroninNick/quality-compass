@@ -8,7 +8,6 @@
   <meta name="keywords" content="<%= yield :meta_keywords %>" />
   <meta name="description" content="<%= yield :meta_description %>" />
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Neucha&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -17,50 +16,19 @@
 <!-- Header and navigation links -->
 <div id="main-header" class="clearfix">
   <div class="container">
-    <div id="info-block">
-      <%= mail_to('support@voroninstudio.eu', 'info') %>
-      <%= link_to('+38 (050) 417-07-28', 'tel:+38 (050) 417-07-28', :title => '+38 (050) 417-07-28') %>
-    </div>
-    <div class="navigation-wrapper">
-      <div class="g3" id="logotype">
-        <%= link_to_unless current_page?(root_path), image_tag('logo.png', :alt => 'ТзОВ «Перспектива»'), root_path %>
-      </div>
-      <div class="g-custom-mobile-menu">
-      </div>
-      <div class="g9 navigation-block">
-        <nav>
-          <ul>
-            <li <% if current_page?(about_path) %> class="visited" <% end %>><%= link_to_unless current_page?(about_path), 'Про нас', about_path, :title => 'Про нас' %></li>
-            <li><%= link_to 'Публікації', '#' %></li>
-            <li><%= link_to 'Університети', '#' %></li>
-            <li><%= link_to 'Студентам', '#' %></li>
-            <li <% if current_page?(contact_path) %> class="visited" <% end %>><%= link_to 'Контакти', contact_path, :title => 'Контакти' %></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-    <div class="block-description">
-      <div class="bd-wrapper">
-        <p class="h1 bd-head">Ваша готельна освіта у Mesoyios college</p>
-        <p class="bd-body"><i>м. Пафос, Кіпр</i></p>
-        <p class="bd-body">Європейська освіта, старт вашої кар'єри, гарантоване працевлаштування</p>
-        <p><%= link_to 'ПРИЄДНУЙСЯ!', about_path, :title => '', :class => 'bd-button' %></p>
-      </div>
 
-    </div>
   </div>
 </div>
 <!-- /Header and navigation links -->
 <div id="main-render" class="clearfix">
   <%= yield %>
 </div>
+
+
 <!-- Footer section -->
 <div id="main-footer" class="clearfix">
   <div class="container">
-    <div class="g4 mf-item-block">
-      <p class="copyrights">© 2012 ТзОВ «Перспектива»</p>
-      <p class="copyrights-studio">Зроблено дизайн студією Миколи Вороніна <br> в 2013р. Інформація про сайт</p>
-    </div>
+
   </div>
 </div>
 <!-- /Footer section -->
