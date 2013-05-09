@@ -2,4 +2,10 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  order_form:
+    name: "name"
+    company: "company"
+    email: "e-mail"
+    phone: "cell phone number"
+    body: "additional information"
+    submit: "Submit"
