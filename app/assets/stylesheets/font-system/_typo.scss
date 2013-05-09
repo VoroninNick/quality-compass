@@ -19,7 +19,7 @@ img{
   -ms-interpolation-mode: bicubic;
 }
 @mixin text-render{
-  text-align: justify;
+  text-align: left;
   hyphens: auto;
   -webkit-hyphens: auto;
   -webkit-hyphenate-character: "\2010";
@@ -29,8 +29,8 @@ img{
   overflow-wrap: hyphenate;
 }
 ::selection{
-  background: #dc0055;
-  color: white;
+  background: #2d4994;
+  color: #ee3343;
   text-shadow: 0 0 0;
   text-decoration: none;
   -webkit-font-smoothing: none;
@@ -42,6 +42,15 @@ img{
   color: white;
   text-shadow: 0 0 0;
   text-decoration: none;
+}
+
+h1, h2, h3, h4, h5{
+  color: #334d99;
+  font-weight: 400;
+}
+
+p{
+  color: #353535;
 }
 
 html, body{
