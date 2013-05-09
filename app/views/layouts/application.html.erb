@@ -14,21 +14,57 @@
 </head>
 <body>
 <!-- Header and navigation links -->
-<div id="main-header" class="clearfix">
+<%= render :partial => 'partials/lang_bar' %>
+<div id="main-header">
   <div class="container">
 
   </div>
 </div>
 <!-- /Header and navigation links -->
-<div id="main-render" class="clearfix">
+<div id="main-render">
   <%= yield %>
 </div>
 
 
 <!-- Footer section -->
-<div id="main-footer" class="clearfix">
+<div id="main-footer">
   <div class="container">
-
+    <div class="g3 footer-item alpha">
+      <h2>Who we are</h2>
+      <ul>
+        <li><%= link_to 'About us', about_path, :title => '' %></li>
+        <li><%= link_to 'CEO massege', about_path, :title => '' %></li>
+        <li><%= link_to 'Join us', about_path, :title => '' %></li>
+      </ul>
+    </div>
+    <div class="g3 footer-item ">
+      <h2>What we do</h2>
+      <ul>
+        <li><%= link_to 'Consultancy', about_path, :title => '' %></li>
+        <li><%= link_to 'Forwarding', about_path, :title => '' %></li>
+        <li><%= link_to 'Excursions', about_path, :title => '' %></li>
+        <li><%= link_to 'Training', about_path, :title => '' %></li>
+        <li><%= link_to 'Media solutions', about_path, :title => '' %></li>
+      </ul>
+    </div>
+    <div class="g3 footer-item ">
+      <h2>Social media</h2>
+      <ul>
+        <li><%= link_to 'Linkedin', about_path, :title => '' %></li>
+        <li><%= link_to 'Facebook', about_path, :title => '' %></li>
+        <li><%= link_to 'Twitter', about_path, :title => '' %></li>
+        <li><%= link_to 'Subscribe ', about_path, :title => '' %></li>
+      </ul>
+    </div>
+    <div class="g3 footer-item omega">
+      <h2>Contatcs</h2>
+      <ul>
+        <li>Sknyliv, Ring Road, Lviv.</li>
+        <li>Mail to: 79018 Lviv, Gorodotska Str., 155, P.O.B. 2789</li>
+        <li>tel.: +38 (050) 417-07-28</li>
+        <li><%= mail_to('info@qualitysompass.com') %></li>
+      </ul>
+    </div>
   </div>
 </div>
 <!-- /Footer section -->
