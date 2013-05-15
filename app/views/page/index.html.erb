@@ -1,3 +1,4 @@
+<%= render :partial => 'partials/home_banners' %>
 <div id="index-page-erb">
   <div class="proverb-holder">
     <div class="g4 proverb-item alpha">
@@ -17,52 +18,25 @@
   <div class="ceo-introduction-holder">
     <div class="g5 ceo-avatar alpha">
       <%= image_tag('ceo-avatar.jpg') %>
-      <h2>Rian Bast</h2>
-      <p>Co-owner</p>
+      <h2><%= t('main.ceo.name') %></h2>
+      <p><%= t('main.ceo.position') %></p>
     </div>
     <div class="g7 ceo-intro omega">
       <h2><%= get_text(4).name %></h2>
       <p><%= get_text(4).body %></p>
     </div>
     <br class="clear">
+    <p class="ceo-sign-push"></p>
     <p class="ceo-sign"><%= image_tag 'ceo-sign.png', :style => 'text-align: right;' %></p>
   </div>
 
   <div class="news-and-order-form">
     <div class="g6 news-block alpha">
-      <h2>News from area</h2>
+      <h2><%= t('index-page.news-heading') %></h2>
       <%= render :partial => 'partials/news_home' %>
     </div>
     <div class="g6 form-block omega">
-      <%= form_for @order, :url => orders_path(@order), :html => {:method => :post} do |f| %>
-        <div class="form-field">
-          <h2>Request form</h2>
-        </div>
-        <div class="form-field">
-          <%= f.text_field :name %>
-          <%= f.label t 'order_form.name' %>
-        </div>
-        <div class="form-field">
-          <%= f.text_field :company %>
-          <%= f.label t 'order_form.company' %>
-        </div>
-        <div class="form-field">
-          <%= f.text_field :email %>
-          <%= f.label t 'order_form.email' %>
-        </div>
-        <div class="form-field">
-          <%= f.text_field :phone %>
-          <%= f.label t 'order_form.phone' %>
-        </div>
-        <div class="form-area">
-          <%= f.text_area :body %>
-          <%= f.label t 'order_form.body' %>
-        </div>
-        <div class="submit-field">
-          <%= f.submit t 'order_form.submit' %>
-        </div>
-
-      <% end %>
+      <%= render :partial => 'partials/home_form' %>
     </div>
   </div>
 </div>
