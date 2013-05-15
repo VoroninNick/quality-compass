@@ -2,4 +2,43 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  order_form:
+    name: "name"
+    company: "company"
+    email: "e-mail"
+    phone: "cell phone number"
+    body: "additional information"
+    submit: "Submit"
+    form_header: "Request form"
+
+  placeholders:
+    name: "Voronin Nick"
+    company: "Voronin Design Studio"
+    body: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable."
+
+  index-page:
+    news-heading: "News from area"
+    read-more: "read more ..."
+
+  main:
+    menu:
+      first_nav: "About"
+      second_nav: "Services"
+      third_nav: "Publications"
+      last_nav: "Contacts"
+    ceo:
+      name: "Rian Bast"
+      position: "Co-owner"
+    footer:
+      first_block: "Who we are"
+      second_block: "What we do"
+      third_block: "Social media"
+      last_block: "Contacts"
+      first_block_menu_1: "About us"
+      first_block_menu_2: "CEO message"
+      first_block_menu_3: "Join us"
+      consultancy: "Consultancy"
+      forwarding: "Forwarding"
+      excursions: "Excursions"
+      training: "Training"
+      media_solutions: "Media solutions"
