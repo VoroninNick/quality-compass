@@ -28,6 +28,24 @@ img{
   -moz-hyphens: auto;
   overflow-wrap: hyphenate;
 }
+
+::-webkit-input-placeholder { /* WebKit browsers */
+  color:    #2d4994;
+  opacity: 0.6;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:    #2d4994;
+  opacity: 0.6;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:    #2d4994;
+  opacity: 0.6;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color:    #2d4994;
+  opacity: 0.6;
+}
+
 ::selection{
   background: #2d4994;
   color: #ee3343;
@@ -38,7 +56,7 @@ img{
 }
 
 ::-moz-selection{
-  background: #dc0055;
+  background: #ee3343;
   color: white;
   text-shadow: 0 0 0;
   text-decoration: none;
