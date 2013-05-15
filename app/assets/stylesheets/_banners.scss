@@ -1,0 +1,76 @@
+#main-page-banner{
+  @extend .clearfix;
+  height: 420px;
+  overflow: hidden;
+  .banner-section-bg{
+    background: #e8e8e8;
+    height: 350px;
+    width: 100%;
+    position: absolute;
+    top: 140px;
+  }
+  .banner-container{
+    width: 90%;
+    max-width: 1580px !important;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 100;
+    background: #e3e3e3;
+    height: 420px;
+    overflow: hidden;
+    img{
+
+    }
+    .banner-description-section{
+      width: 450px;
+      top: -260px;
+      right: -65%;
+      position: relative;
+      padding: 1em;
+      background: rgba(45, 73, 148, 0.4);
+      -webkit-transition: 0.5s ease-in all;
+      -moz-transition: 0.5s ease-in all;
+      -ms-transition: 0.5s ease-in all;
+      -o-transition: 0.5s ease-in all;
+      transition: 0.5s ease-in all;
+      @media (min-width: 1px) and (max-width: 690px) {
+        right: -15%;
+      }
+      @media (min-width: 690px) and (max-width: 790px) {
+        right: -25%;
+      }
+      @media (min-width: 790px) and (max-width: 950px) {
+        right: -35%;
+      }
+      @media (min-width: 950px) and (max-width: 1140px) {
+        right: -45%;
+      }
+      @media (min-width: 1140px) and (max-width: 1400px) {
+        right: -55%;
+      }
+      h2{
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 3.8em;
+        text-align: right !important;
+      }
+      p{
+        color: #ffffff;
+        font-size: 1.4em;
+        line-height: 1.4em;
+        text-align: right !important;
+        font-weight: 300;
+        margin-top: 1em;
+        -webkit-font-smoothing: $text-block-antialaising;
+        @media  (min-width: 960px){
+          @include text-render;
+        }
+        @media  (min-width: 1200px) and (max-width: 1920px){
+          @include text-render;
+        }
+        @media  (min-width: 1px) and (max-width: 959px){}
+      }
+    }
+  }
+}
