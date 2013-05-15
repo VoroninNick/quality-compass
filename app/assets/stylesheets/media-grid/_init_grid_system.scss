@@ -48,13 +48,7 @@ article.container{
   clear: both;
   zoom: 1;
   [class*="g"]{
-    display:inline;
-    float: left;
-    position: relative;
 
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
   }
 }
 .clear {
