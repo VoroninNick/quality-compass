@@ -15,6 +15,7 @@ gem 'ckeditor'
 gem 'rename'
 gem 'globalize3'
 gem 'rails_admin_globalize', :github => 'voroninstudio/rails_admin_globalize'
+gem 'haml-rails'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

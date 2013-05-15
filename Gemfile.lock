@@ -230,6 +230,7 @@ DEPENDENCIES
   fancybox-rails!
   flexslider!
   globalize3
+  haml-rails
   jquery-migrate-rails
   jquery-rails (~> 2.1)
   jquery-ui-rails (= 3.0.1)
