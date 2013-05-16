@@ -2,6 +2,16 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  system:
+    login_heading: "Please login to manage system"
+    name: "e-mail or nickname"
+    name_placeholder: "support@voroninstudio.eu"
+    password: "password"
+    password_placeholder: "**********"
+    remember_me: "remember me ?"
+    sign_in: "Sign in!"
+    forget_password: "Forget password?"
+
   order_form:
     name: "name"
     company: "company"
