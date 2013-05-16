@@ -1,8 +1,8 @@
 Qualitycompass::Application.routes.draw do
-
   devise_for :admins
   mount Ckeditor::Engine => '/ckeditor'
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
 
   scope '(:locale)', :locale => /en|ru|uk/ do
     match 'about-us'                  => 'page#about',                    :as => 'about', :via => :get
@@ -17,4 +17,9 @@ Qualitycompass::Application.routes.draw do
     match 'subscribe'                 => 'page#index',                    :as => 'subscribe'
     root :to                          => 'page#index'
   end
+
+  unless Rails.application.config.consider_all_requests_local
+    match '*not_found', to: 'errors#error_404'
+  end
+
 end
