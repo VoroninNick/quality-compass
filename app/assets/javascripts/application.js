@@ -12,7 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require jq-modernizer.prod.min.js
+//= require jquery.ba-cond.min.js
+//= require jquery.slitslider.js
 $(document).ready(function() {
     $('.mobile-nav-bt').click(function(){
         $('#mobile-menu').slideToggle();
