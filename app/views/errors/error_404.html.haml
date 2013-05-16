@@ -1,0 +1,12 @@
+%div.container
+  %div.g12.error-holder
+    %h1 404 &mdash; We're sorry
+    %div
+      %p
+        The content that you requested could not be found. You tried to access
+        %span'#{@not_found_path}'
+        , which is not a valid page.
+      %p
+        Want to
+        %a{href: root_path} go back to our home page
+        and try again?
