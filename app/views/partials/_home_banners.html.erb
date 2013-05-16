@@ -1,61 +1,25 @@
 <div id="slider-bg"></div>
 <div id="slider" class="sl-slider-wrapper demo-2">
-
   <div class="sl-slider">
-    <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
-      <div class="sl-slide-inner">
-        <div class="bg-img bg-img-1"></div>
-        <h2>Safe food</h2>
-        <blockquote>
-          <p>You have just dined, and however scrupulously the slaughterhouse is concealed in the graceful distance of miles, there is complicity.</p>
-          <cite></cite>
-        </blockquote>
+    <% @slides.each do |slide| %>
+      <script type="text/javascript">
+      $(document).ready(function() {
+        $(".bg-img-<%= slide.id %>").css({
+          'background-image': 'url(<%= slide.avatar.url %>)'
+        });
+      });
+      </script>
+      <div class="sl-slide" data-orientation="<%= slide.orientation %>" data-slice1-rotation="<%= slide.slice1_rotation %>" data-slice2-rotation="<%= slide.slice2_rotation %>" data-slice1-scale="<%= slide.slice1_scale %>" data-slice2-scale="<%= slide.slice1_scale %>">
+        <div class="sl-slide-inner">
+          <div class="bg-img bg-img-<%= slide.id %>"></div>
+          <h2><%= slide.name %></h2>
+          <blockquote>
+            <p><%= slide.description %></p>
+            <cite></cite>
+          </blockquote>
+        </div>
       </div>
-    </div>
-
-    <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
-      <div class="sl-slide-inner">
-        <div class="bg-img bg-img-2"></div>
-        <h2>Regula aurea.</h2>
-        <blockquote>
-          <p>Until he extends the circle of his compassion to all living things, man will not himself find peace.</p>
-          <cite></cite>
-        </blockquote>
-      </div>
-    </div>
-
-    <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
-      <div class="sl-slide-inner">
-        <div class="bg-img bg-img-3"></div>
-        <h2>Dum spiro.</h2>
-        <blockquote>
-          <p>Thousands of people who say they 'love' animals sit down once or twice a day to enjoy the flesh of creatures who have been utterly deprived of everything that could make their lives worth living and who endured the awful suffering and the terror of the abattoirs.</p>
-          <cite></cite>
-        </blockquote>
-      </div>
-    </div>
-
-    <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="-5" data-slice2-rotation="25" data-slice1-scale="2" data-slice2-scale="1">
-      <div class="sl-slide-inner">
-        <div class="bg-img bg-img-4"></div>
-        <h2>Donna nobis.</h2>
-        <blockquote>
-          <p>The human body has no more need for cows' milk than it does for dogs' milk, horses' milk, or giraffes' milk.</p>
-          <cite></cite>
-        </blockquote>
-      </div>
-    </div>
-
-    <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-5" data-slice2-rotation="10" data-slice1-scale="2" data-slice2-scale="1">
-      <div class="sl-slide-inner">
-        <div class="bg-img bg-img-5"></div>
-        <h2>Acta Non.</h2>
-        <blockquote>
-          <p>I think if you want to eat more meat you should kill it yourself and eat it raw so that you are not blinded by the hypocrisy of having it processed for you.</p>
-          <cite></cite>
-        </blockquote>
-      </div>
-    </div>
+    <% end %>
   </div><!-- /sl-slider -->
 
   <nav id="nav-dots" class="nav-dots">

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130509220005) do
+ActiveRecord::Schema.define(:version => 20130516142918) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -98,6 +98,34 @@ ActiveRecord::Schema.define(:version => 20130509220005) do
   end
 
   add_index "rails_admin_histories", ["item", "table", "month", "year"], :name => "index_rails_admin_histories"
+
+  create_table "slide_translations", :force => true do |t|
+    t.integer  "slide_id"
+    t.string   "locale"
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "slide_translations", ["locale"], :name => "index_slide_translations_on_locale"
+  add_index "slide_translations", ["slide_id"], :name => "index_slide_translations_on_slide_id"
+
+  create_table "slides", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+    t.string   "orientation"
+    t.string   "slice1_rotation"
+    t.string   "slice2_rotation"
+    t.string   "slice1_scale"
+    t.string   "slice2_scale"
+  end
 
   create_table "text_translations", :force => true do |t|
     t.integer  "text_id"
