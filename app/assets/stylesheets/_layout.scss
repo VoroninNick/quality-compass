@@ -138,7 +138,7 @@
   .container{
     .footer-item{
       padding: 2.4em 0;
-      @media  (min-width: 1px) and (max-width: 720px){
+      @media  (min-width: 1px) and (max-width: 740px){
         @include make-half-width;
         margin-bottom: 1em;
       }
