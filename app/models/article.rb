@@ -1,6 +1,7 @@
 class Article < ActiveRecord::Base
   attr_accessible :avatar, :full_description, :name, :published, :short_description, :slug, :delete_avatar
-
+  attr_accessor :delete_avatar
+  
   translates :full_description, :name, :short_description
 
   class Translation
@@ -10,11 +11,8 @@ class Article < ActiveRecord::Base
   validates :name, presence: true
   validates :slug, uniqueness: true, presence: true
 
-  attr_accessor :delete_avatar
-  before_validation { self.avatar.clear if self.delete_avatar == '1' }
-
-  before_validation :generate_slug_for_article
-
+  before_validation :generate_slug_for_article, :remove_avatar
+  
   has_attached_file :avatar, :styles => { :thumb => '180>', :item => '600>' },
                     :url  => '/assets/article/:id/:style/:basename.:extension',
                     :path => ':rails_root/public/assets/article/:id/:style/:basename.:extension'
@@ -25,6 +23,10 @@ class Article < ActiveRecord::Base
 
   def generate_slug_for_article
     self.slug ||= name.parameterize
+  end
+  
+  def remove_avatar
+    self.avatar.clear if self.delete_avatar == '1'
   end
 
   rails_admin do
