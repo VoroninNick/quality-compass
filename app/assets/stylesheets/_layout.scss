@@ -212,8 +212,8 @@
 
 #footer{
   @extend .clearfix;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
   .footer-container{
     width: 90%;
     max-width: 920px !important;
