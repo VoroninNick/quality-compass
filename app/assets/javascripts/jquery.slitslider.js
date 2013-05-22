@@ -134,8 +134,8 @@
         _getSize : function() {
 
             this.size = {
-                width : this.$elWrapper.outerWidth( true ),
-                height : this.$elWrapper.outerHeight( true )
+                width : this.$elWrapper.outerWidth(  ),
+                height : this.$elWrapper.outerHeight(  )
             };
 
         },

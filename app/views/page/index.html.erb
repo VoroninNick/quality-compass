@@ -13,21 +13,27 @@
       <h2><%= image_tag('heading-arrow.png') %> <%= get_text(3).name %></h2>
       <p><%= get_text(3).body %></p>
     </div>
+    <div class="clearfix"></div>
   </div>
 
   <div class="ceo-introduction-holder">
-    <div class="g5 ceo-avatar alpha">
+    <div id="ceo-avatar" class="g3 ceo-avatar">
       <%= image_tag('ceo-avatar.jpg') %>
       <h2><%= t('main.ceo.name') %></h2>
       <p><%= t('main.ceo.position') %></p>
     </div>
-    <div class="g7 ceo-intro omega">
-      <h2><%= get_text(4).name %></h2>
-      <p><%= get_text(4).body %></p>
+    <div class="g7 ceo-intro-wrapper omega">
+      <div id="ceo-intro">
+        <h2><%= get_text(4).name %></h2>
+        <p><%= get_text(4).body %></p>
+      </div>
+      <p class="ceo-sign"><%= image_tag 'ceo-sign.png', :style => 'text-align: right;' %></p>
+      <div class="clear"></div>
     </div>
     <br class="clear">
+    
     <p class="ceo-sign-push"></p>
-    <p class="ceo-sign"><%= image_tag 'ceo-sign.png', :style => 'text-align: right;' %></p>
+    
   </div>
 
   <div class="news-and-order-form">

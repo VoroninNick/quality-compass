@@ -1,9 +1,17 @@
+
 #main-header{
   @extend .clearfix;
   line-height: 72px;
   height: 72px;
   margin-bottom: 1.6em;
-  #mobile-menu{
+
+  .mobile-display-menu{
+    display: block;
+  }
+  .mobile-hide-menu{
+    display: none;
+  }
+  .mobile-menu{
     position: relative;
     z-index: 900;
     @extend .clearfix;
@@ -124,6 +132,16 @@
       }
     }
   }
+
+  .mobile-display-menu{
+    display: none;
+    @media(max-width:640px){
+      display: block;
+    }
+  }
+  .mobile-hide-menu{
+    display: none;
+  }
 }
 
 #main-render{
@@ -138,7 +156,7 @@
   .container{
     .footer-item{
       padding: 2.4em 0;
-      @media  (min-width: 1px) and (max-width: 720px){
+      @media  (min-width: 1px) and (max-width: 740px){
         @include make-half-width;
         margin-bottom: 1em;
       }
@@ -212,8 +230,8 @@
 
 #footer{
   @extend .clearfix;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
   .footer-container{
     width: 90%;
     max-width: 920px !important;

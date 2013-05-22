@@ -1,0 +1,30 @@
+<div id="main-header">
+  <div class="container">
+    <div id="logo" class="g4">
+      <%= link_to_unless current_page?(root_path), image_tag('qc-logotype.png', :alt => 'Quality Compass'), root_path %>
+    </div>
+    <div id="navigation" class="g8">
+      <div class="mobile-nav-bt"></div>
+      <nav>
+        <ul>
+          <li><%= link_to t('main.menu.first_nav'), about_path, :title => t('main.menu.first_nav') %></li>
+          <li><%= link_to t('main.menu.second_nav'), about_path, :title => t('main.menu.second_nav') %></li>
+          <li><%= link_to t('main.menu.third_nav'), news_path, :title => t('main.menu.third_nav') %></li>
+          <li><%= link_to t('main.menu.last_nav'), about_path, :title => t('main.menu.last_nav') %></li>
+        </ul>
+      </nav>
+    </div>
+    <br class="clear">
+    <div id="mobile-menu" class="g12 mobile-menu">
+      <nav>
+        <ul>
+          <li><%= link_to t('main.menu.first_nav'), about_path, :title => t('main.menu.first_nav') %></li>
+          <li><%= link_to t('main.menu.second_nav'), about_path, :title => t('main.menu.second_nav') %></li>
+          <li><%= link_to t('main.menu.third_nav'), news_path, :title => t('main.menu.third_nav') %></li>
+          <li><%= link_to t('main.menu.last_nav'), about_path, :title => t('main.menu.last_nav') %></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+<!-- /Header and navigation links -->

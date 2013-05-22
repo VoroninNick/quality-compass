@@ -32,7 +32,7 @@ en:
   placeholders:
     name: "Voronin Nick"
     company: "Voronin Design Studio"
-    body: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable."
+    body: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
 
   index-page:
     news-heading: "News from area"
