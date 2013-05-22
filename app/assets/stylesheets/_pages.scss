@@ -4,6 +4,8 @@
     @include holders;
     @extend .clearfix;
     @extend .container;
+
+    margin-bottom:4em;
     .proverb-item{
       img{
         vertical-align: baseline;
@@ -23,7 +25,7 @@
         }
         @media  (min-width: 1px) and (max-width: 959px){}
 
-        @media(max-width:480px){
+        @media(max-width:1200px){
           padding-left:0;
         }
       }
@@ -40,16 +42,24 @@
     @include holders;
     @extend .clearfix;
     @extend .container;
-    .ceo-avatar{
+    margin-bottom: 4em;
+    #ceo-avatar{
+      margin-left: 7.33%;
+      margin-right:6.33% / 2 + 1%;
       text-align: center !important;
+      img{
+        max-width: 100%;
+      }
       h2{
+        width: 100%;
         margin-top: 0.75em;
       }
       p{
+        width: 100%;
         font-weight: 300;
         font-style: italic;
         font-size: 0.9em;
-        margin-top: 0.5em;
+        margin-top: 0;
         text-align: center !important;
         -webkit-font-smoothing: $text-block-antialaising;
         @media  (min-width: 960px){
@@ -66,25 +76,44 @@
       }
     }
 
-    .ceo-intro{
-      padding-top: 3em;
-      padding-bottom: 3em;
-      padding-left: 2em;
-      border-left: 1px solid #dddddd;
+    .ceo-intro-wrapper{
+      
+      #ceo-intro{
+        
+        padding-top: 3em;
+        padding-bottom: 3em;
+        padding-left: ( 6.33% / 2 + 1% ) / 0.73;
+      
+        margin-left: 0;
 
-      h2{}
-      p{
-        font-weight: 300;
-        margin-top: 1em;
-        -webkit-font-smoothing: $text-block-antialaising;
-        @media  (min-width: 960px){
-          @include text-render;
+        border-left: 1px solid #dddddd;
+      
+        h2{}
+      
+        p{
+          font-weight: 300;
+          margin-top: 1em;
+          -webkit-font-smoothing: $text-block-antialaising;
+          
+          @media  (min-width: 960px){
+            @include text-render;
+          }
+          @media  (min-width: 1200px) and (max-width: 1920px){
+            @include text-render;
+          }
+          @media  (min-width: 1px) and (max-width: 959px){}
         }
-        @media  (min-width: 1200px) and (max-width: 1920px){
-          @include text-render;
-        }
-        @media  (min-width: 1px) and (max-width: 959px){}
+
+        @media  (min-width: 1px) and (max-width: 720px){
+        //@include make-full-width;
+        //margin-bottom: 1em;
+        border-left: 0;
+        //padding-top: 0;
+        //padding-bottom: 0;
+        //padding-left: 0;
       }
+      }
+
       @media  (min-width: 1px) and (max-width: 720px){
         @include make-full-width;
         margin-bottom: 1em;
@@ -93,6 +122,7 @@
         padding-bottom: 0;
         padding-left: 0;
       }
+      
     }
 
     .ceo-sign-push{
@@ -103,11 +133,18 @@
     }
 
     .ceo-sign{
-      @extend .g4;
-      margin-top: -100px;
-      float: right;
-      text-align: right !important;
-      @extend .omega;
+      //@extend .g4;
+      //margin-top: -100px;
+      float: left;
+      //text-align: right !important;
+      //@extend .omega;
+      width: 100%;
+      
+      img{
+        margin-top: -3em;
+        margin-right: 7.33%;
+        float: right;
+      }
     }
   }
 
@@ -115,6 +152,7 @@
     @include holders;
     @extend .clearfix;
     @extend .container;
+
     .news-block{
       @media  (min-width: 1px) and (max-width: 720px){
         @include make-full-width;
@@ -208,7 +246,7 @@
         padding-left: 0;
       }
       form{
-        padding: 3.5em;
+        padding: 39px;
         @media  (min-width: 1px) and (max-width: 720px){
           padding: 1.5em;
         }

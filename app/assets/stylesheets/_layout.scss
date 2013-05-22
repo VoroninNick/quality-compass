@@ -1,9 +1,17 @@
+
 #main-header{
   @extend .clearfix;
   line-height: 72px;
   height: 72px;
   margin-bottom: 1.6em;
-  #mobile-menu{
+
+  .mobile-display-menu{
+    display: block;
+  }
+  .mobile-hide-menu{
+    display: none;
+  }
+  .mobile-menu{
     position: relative;
     z-index: 900;
     @extend .clearfix;
@@ -123,6 +131,16 @@
         }
       }
     }
+  }
+
+  .mobile-display-menu{
+    display: none;
+    @media(max-width:640px){
+      display: block;
+    }
+  }
+  .mobile-hide-menu{
+    display: none;
   }
 }
 

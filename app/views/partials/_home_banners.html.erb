@@ -1,3 +1,4 @@
+<div id="home-slider-area">
 <div id="slider-bg"></div>
 <div id="slider" class="sl-slider-wrapper demo-2">
   <div class="sl-slider">
@@ -12,31 +13,36 @@
       <div class="sl-slide" data-orientation="<%= slide.orientation %>" data-slice1-rotation="<%= slide.slice1_rotation %>" data-slice2-rotation="<%= slide.slice2_rotation %>" data-slice1-scale="<%= slide.slice1_scale %>" data-slice2-scale="<%= slide.slice1_scale %>">
         <div class="sl-slide-inner">
           <div class="bg-img bg-img-<%= slide.id %>"></div>
-          <h2><%= slide.name %></h2>
-          <blockquote>
-            <p><%= slide.description %></p>
-            <cite></cite>
-          </blockquote>
+          <div class="description-wrapper">
+            <h2><%= slide.name %></h2>
+            <blockquote>
+              <p><%= slide.description %></p>
+              <cite></cite>
+            </blockquote>
+          </div>
         </div>
       </div>
     <% end %>
   </div><!-- /sl-slider -->
 
-  <nav id="nav-dots" class="nav-dots">
-    <span class="nav-dot-current"></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-  </nav>
+  
 
 </div><!-- /slider-wrapper -->
+<nav id="nav-dots" class="nav-dots">
+    <% for i in 0...@slides.count  %>
+      <span <% if i == 0 then %> class="nav-dot nav-dot-current" <% else %> class="nav-dot" <% end %> ></span>
+      <% if(i<@slides.count - 1) then %>
+        <span class="separator"></span>
+      <% end %>
+    <% end %>
+</nav>
+</div>
 <script type="text/javascript">
   $(function() {
 
     var Page = (function() {
 
-      var $nav = $( '#nav-dots > span' ),
+      var $nav = $( '#nav-dots > span.nav-dot' ),
           slitslider = $( '#slider' ).slitslider( {
             onBeforeChange : function( slide, pos ) {
 
