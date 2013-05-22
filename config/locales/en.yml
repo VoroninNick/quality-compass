@@ -2,6 +2,14 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  activerecord:
+    models:
+      article: "News and publications"
+      slide: "Home page slides"
+      text: "Texts editor"
+    attributes:
+      user:
+        login: "Handle"
   system:
     login_heading: "Please login to manage system"
     name: "e-mail or nickname"
