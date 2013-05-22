@@ -1,0 +1,48 @@
+<%= render :partial => 'partials/home_banners' %>
+<div id="index-page-erb">
+  <div class="proverb-holder">
+    <div class="g4 proverb-item alpha">
+      <h2><%= image_tag('heading-arrow.png') %> <%= get_text(1).name %></h2>
+      <p><%= get_text(1).body %></p>
+    </div>
+    <div class="g4 proverb-item">
+      <h2><%= image_tag('heading-arrow.png') %> <%= get_text(2).name %></h2>
+      <p><%= get_text(2).body %></p>
+    </div>
+    <div class="g4 proverb-item omega">
+      <h2><%= image_tag('heading-arrow.png') %> <%= get_text(3).name %></h2>
+      <p><%= get_text(3).body %></p>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+
+  <div class="ceo-introduction-holder">
+    <div id="ceo-avatar" class="g3 ceo-avatar">
+      <%= image_tag('ceo-avatar.jpg') %>
+      <h2><%= t('main.ceo.name') %></h2>
+      <p><%= t('main.ceo.position') %></p>
+    </div>
+    <div class="g7 ceo-intro-wrapper omega">
+      <div id="ceo-intro">
+        <h2><%= get_text(4).name %></h2>
+        <p><%= get_text(4).body %></p>
+      </div>
+      <p class="ceo-sign"><%= image_tag 'ceo-sign.png', :style => 'text-align: right;' %></p>
+      <div class="clear"></div>
+    </div>
+    <br class="clear">
+    
+    <p class="ceo-sign-push"></p>
+    
+  </div>
+
+  <div class="news-and-order-form">
+    <div class="g6 news-block alpha">
+      <h2><%= t('index-page.news-heading') %></h2>
+      <%= render :partial => 'partials/news_home' %>
+    </div>
+    <div class="g6 form-block omega">
+      <%= render :partial => 'partials/home_form' %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<% @last_news.each do |news_item|  %>
+<div class="news-block-item">
+  <%= image_tag(news_item.avatar.url(:thumb), :alt => news_item.name) %>
+  <h3><%= link_to news_item.name, news_item_path(news_item) %></h3>
+  <p><%= news_item.short_description %></p>
+</div>
+<% end %>
+<div class="news-button">
+  <%= link_to t('index-page.read-more'), news_path %>
+</div>

@@ -19,7 +19,7 @@ img{
   -ms-interpolation-mode: bicubic;
 }
 @mixin text-render{
-  text-align: justify;
+  text-align: left;
   hyphens: auto;
   -webkit-hyphens: auto;
   -webkit-hyphenate-character: "\2010";
@@ -28,9 +28,27 @@ img{
   -moz-hyphens: auto;
   overflow-wrap: hyphenate;
 }
+
+::-webkit-input-placeholder { /* WebKit browsers */
+  color:    #2d4994;
+  opacity: 0.6;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:    #2d4994;
+  opacity: 0.6;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:    #2d4994;
+  opacity: 0.6;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color:    #2d4994;
+  opacity: 0.6;
+}
+
 ::selection{
-  background: #dc0055;
-  color: white;
+  background: #2d4994;
+  color: #ee3343;
   text-shadow: 0 0 0;
   text-decoration: none;
   -webkit-font-smoothing: none;
@@ -38,10 +56,19 @@ img{
 }
 
 ::-moz-selection{
-  background: #dc0055;
+  background: #ee3343;
   color: white;
   text-shadow: 0 0 0;
   text-decoration: none;
+}
+
+h1, h2, h3, h4, h5{
+  color: #334d99;
+  font-weight: 400;
+}
+
+p{
+  color: #353535;
 }
 
 html, body{
@@ -117,5 +144,30 @@ h6,.h6{
   h6,.h6{
     font-size:16px;
     line-height:1.5;    /* 24px */
+  }
+}
+
+.mail-to{
+  a{
+    color: #334d99 !important;
+    border-bottom: 1px solid rgba(51, 77, 153, 0) !important;
+    text-decoration: none;
+    -webkit-transition: 0.5s ease-in all;
+    -moz-transition: 0.5s ease-in all;
+    -ms-transition: 0.5s ease-in all;
+    -o-transition: 0.5s ease-in all;
+    transition: 0.5s ease-in all;
+    &:hover{
+      border-bottom: 1px solid rgba(51, 77, 153, 1) !important;
+      color: #334d99 !important;
+    }
+    &:visited{
+      text-decoration: none;
+      color: #334d99 !important;
+    }
+    &:active{
+      text-decoration: none;
+      color: #334d99 !important;
+    }
   }
 }

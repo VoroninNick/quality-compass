@@ -2,4 +2,61 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    models:
+      article: "News and publications"
+      slide: "Home page slides"
+      text: "Texts editor"
+    attributes:
+      user:
+        login: "Handle"
+  system:
+    login_heading: "Please login to manage system"
+    name: "e-mail or nickname"
+    name_placeholder: "support@voroninstudio.eu"
+    password: "password"
+    password_placeholder: "**********"
+    remember_me: "remember me ?"
+    sign_in: "Sign in!"
+    forget_password: "Forget password?"
+
+  order_form:
+    name: "name"
+    company: "company"
+    email: "e-mail"
+    phone: "cell phone number"
+    body: "additional information"
+    submit: "Submit"
+    form_header: "Request form"
+
+  placeholders:
+    name: "Voronin Nick"
+    company: "Voronin Design Studio"
+    body: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+
+  index-page:
+    news-heading: "News from area"
+    read-more: "read more ..."
+
+  main:
+    menu:
+      first_nav: "About"
+      second_nav: "Services"
+      third_nav: "Publications"
+      last_nav: "Contacts"
+    ceo:
+      name: "Rian Bast"
+      position: "Co-owner"
+    footer:
+      first_block: "Who we are"
+      second_block: "What we do"
+      third_block: "Social media"
+      last_block: "Contacts"
+      first_block_menu_1: "About us"
+      first_block_menu_2: "CEO message"
+      first_block_menu_3: "Join us"
+      consultancy: "Consultancy"
+      forwarding: "Forwarding"
+      excursions: "Excursions"
+      training: "Training"
+      media_solutions: "Media solutions"

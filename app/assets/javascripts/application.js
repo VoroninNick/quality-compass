@@ -12,9 +12,35 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require jq-modernizer.prod.min.js
+//= require jquery.ba-cond.min.js
+//= require jquery.slitslider.js
+//= require visual-grid.js
 $(document).ready(function() {
-    $('.g-custom-mobile-menu').click(function(){
-        $('.navigation-block').slideToggle();
-    });
+    //$('.mobile-nav-bt').click(function(){
+    //    $('#mobile-menu').slideToggle();
+    //});
+
+    $('.mobile-nav-bt').click(function(){
+			//alert($('#menu').length);
+			if($('#mobile-menu:hidden').length>0){
+				$('#mobile-menu').slideDown({
+				complete:function(){
+					$('#mobile-menu').removeAttr('style');
+					$('#mobile-menu').removeClass('mobile-hide-menu');
+					$('#mobile-menu').addClass('mobile-display-menu');
+				}
+			});
+			}
+			else{
+				$('#mobile-menu').slideUp({
+					complete:function(){
+						$('#mobile-menu').removeAttr('style');
+						$('#mobile-menu').removeClass('mobile-display-menu');
+						$('#mobile-menu').addClass('mobile-hide-menu');
+					}
+				});
+				
+			}	
+		});
 });

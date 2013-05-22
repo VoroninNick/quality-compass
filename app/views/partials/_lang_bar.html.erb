@@ -1,0 +1,7 @@
+<div id="language-bar">
+  <ul>
+    <li <% if I18n.locale == :en %> class="active" <% end %> ><%= link_to 'eng', '/en' %></li>
+    <li <% if I18n.locale == :ru %> class="active" <% end %> ><%= link_to 'rus', '/ru' %></li>
+    <li <% if I18n.locale == :uk %> class="active" <% end %> ><%= link_to 'ua', '/uk' %></li>
+  </ul>
+</div>

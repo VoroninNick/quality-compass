@@ -14,23 +14,15 @@
 </head>
 <body>
 <!-- Header and navigation links -->
-<div id="main-header" class="clearfix">
-  <div class="container">
+<%= render :partial => 'partials/lang_bar' %>
 
-  </div>
-</div>
-<!-- /Header and navigation links -->
-<div id="main-render" class="clearfix">
+<%= render :partial => 'partials/header' %>
+
+<div id="main-render">
   <%= yield %>
 </div>
 
+<%= render :partial => 'partials/footer' %>
 
-<!-- Footer section -->
-<div id="main-footer" class="clearfix">
-  <div class="container">
-
-  </div>
-</div>
-<!-- /Footer section -->
 </body>
 </html>

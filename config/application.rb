@@ -31,7 +31,9 @@ module Qualitycompass
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    config.i18n.default_locale = :ru
+    config.i18n.default_locale = :en
+    config.i18n.fallbacks = true
+    config.i18n.available_locales = [:en, :ru, :uk]
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
@@ -58,5 +60,15 @@ module Qualitycompass
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.action_mailer.smtp_settings = {
+        :address              => 'smtp.gmail.com',
+        :port                 => 587,
+        :domain               => 'voroninstudio.eu',
+        :user_name            => 'support@voroninstudio.eu',
+        :password             => 'casper159357*0',
+        :authentication       => :plain,
+        :enable_starttls_auto => true
+    }
   end
 end
