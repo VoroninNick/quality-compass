@@ -11,8 +11,8 @@ class OrderController < ApplicationController
       redirect_to(root_path)
       flash[:notice] = 'Message was successfully sent.'
     else
-      flash.now.alert = 'Please fill all fields.'
-      render :new
+      flash[:notice] = 'Please fill all fields.'
+      redirect_to(root_path)
     end
   end
 end
