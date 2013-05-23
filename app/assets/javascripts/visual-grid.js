@@ -21,11 +21,12 @@ $(document).ready(function(){
 	$grid.css({
 		'display':'none',
 		'position':'absolute',
-		'left':0,
+		'left':'5%',
+        'right': '5%',
 		'top':0,
 		'z-index':100000,
 		'height':document_height,
-		'width':'100%',
+		'width':'90%',
 		'background-color':'rgba(220,255,100,0.3)'
 
 	});
