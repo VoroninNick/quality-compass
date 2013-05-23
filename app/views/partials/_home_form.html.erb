@@ -1,5 +1,5 @@
-<%= form_for @order, :url => orders_path(@order), :html => {:method => :post} do |f| %>
-  <div class="form-field" style="margin-bottom: 39px;height:auto;">
+<%= form_for @order, :url => orders_path(@order), :html => { method: 'post' } do |f| %>
+  <div class="form-field form-first-field">
     <h2><%= t 'order_form.form_header' %></h2>
   </div>
   <div class="form-field">
