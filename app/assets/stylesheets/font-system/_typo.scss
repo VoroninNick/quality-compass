@@ -47,17 +47,15 @@ img{
 }
 
 ::selection{
-  background: #2d4994;
-  color: #ee3343;
+  background: #333;
+  color: #fff;
   text-shadow: 0 0 0;
   text-decoration: none;
-  -webkit-font-smoothing: none;
-  font-size: 150%;
 }
 
 ::-moz-selection{
-  background: #ee3343;
-  color: white;
+  background: #333;
+  color: #fff;
   text-shadow: 0 0 0;
   text-decoration: none;
 }
