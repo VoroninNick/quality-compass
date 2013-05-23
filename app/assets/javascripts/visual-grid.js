@@ -14,7 +14,7 @@ $(document).ready(function(){
 		$grid.append($column);
 		$column.css({
 			'height':'100%',
-			'background-color':'rgba(0, 160, 198, 0.8)'
+			'background-color':'rgba(0, 160, 198, 0.65)'
 		});
 	}
 	$body.append($grid);
@@ -27,7 +27,7 @@ $(document).ready(function(){
 		'z-index':100000,
 		'height':document_height,
 		'width':'90%',
-		'background-color':'rgba(0, 160, 198, 0.4)'
+		'background-color':'rgba(0, 160, 198, 0.25)'
 
 	});
 	$body.keypress(function(event){
