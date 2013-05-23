@@ -42,7 +42,7 @@
       <%= render :partial => 'partials/news_home' %>
     </div>
     <div class="g6 form-block omega">
-      <%= render :partial => 'partials/home_form' %>
+      <%= render :partial => 'partials/home_form', :locals => { order: Order.new } %>
     </div>
   </div>
 </div>
