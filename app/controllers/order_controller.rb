@@ -4,11 +4,13 @@ class OrderController < ApplicationController
   end
 
   def create
-    @order = Order.new(params[:message])
+    @order = Order.new(params[:order])
 
     if @order.valid?
+      logger.error('Sending an email to default mail')
       NotificationsMailer.new_order(@order).deliver
-      redirect_to(root_path, :notice => 'Message was successfully sent.')
+      redirect_to(root_path)
+      flash[:notice] = 'Message was successfully sent.'
     else
       flash.now.alert = 'Please fill all fields.'
       render :new
