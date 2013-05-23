@@ -7,7 +7,6 @@ class OrderController < ApplicationController
     @order = Order.new(params[:order])
 
     if @order.valid?
-      logger.error('Sending an email to default mail')
       NotificationsMailer.new_order(@order).deliver
       redirect_to(root_path)
       flash[:notice] = 'Message was successfully sent.'
