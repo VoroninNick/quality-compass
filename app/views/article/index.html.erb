@@ -1,2 +1,18 @@
-<h1>Article#index</h1>
-<p>Find me in app/views/article/index.html.erb</p>
+<div id="article-index-page-erb">
+  <div class="article-holder">
+    <h1 class="alpha"><%= t('main.menu.third_nav') %></h1>
+    <br class="clear">
+    <% @news.each_with_index do |news_item, idx|  %>
+      <div class="news-block-item <%= cycle('alpha', 'omega') %>">
+        <%= image_tag(news_item.avatar.url(:thumb), :alt => news_item.name) %>
+        <h3><%= link_to news_item.name, news_item_path(news_item) %></h3>
+        <p><%= news_item.short_description %></p>
+      </div>
+      <% if( (idx + 1) % 2 == 0 ) %>
+      <br class="clear">
+      <% end %>
+    <% end %>
+  </div>
+  <br class="clear">
+  <div class="article-footer-push"></div>
+</div>

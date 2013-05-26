@@ -1,2 +1,37 @@
-<h1>Article#show</h1>
-<p>Find me in app/views/article/show.html.erb</p>
+<div id="article-index-page-erb">
+  <div class="article-holder">
+    <ul class="alpha article-breadcrumbs">
+      <li>\\ <%= link_to t('main.menu.home'), root_path %></li>
+      <li>\ <%= link_to t('main.menu.third_nav'), news_path %></li>
+      <li>\ <%= @new.name %></li>
+    </ul>
+    <br class="clear">
+    <div class="article-avatar alpha">
+      <%= image_tag(@new.avatar.url(:item), :alt => @new.name) %>
+    </div>
+    <div class="article-description omega">
+      <h2><%= @new.name %></h2>
+      <p><i><%= @new.short_description %></i></p>
+      <div class="html_safe">
+        <%= @new.full_description.html_safe unless @new.full_description.blank? %>
+      </div>
+    </div>
+    <br class="clear">
+    <div class="article-footer-push"></div>
+    <h2 class="g12 alpha"><%= t('news.latest') %></h2>
+    <br class="clear">
+    <% @last_news.each_with_index do |news_item, idx|  %>
+      <div class="news-block-item <%= cycle('alpha', 'omega') %>">
+        <%= image_tag(news_item.avatar.url(:thumb), :alt => news_item.name) %>
+        <h3><%= link_to news_item.name, news_item_path(news_item) %></h3>
+        <p><%= news_item.short_description %></p>
+      </div>
+      <% if( (idx + 1) % 2 == 0 ) %>
+        <br class="clear">
+      <% end %>
+    <% end %>
+  </div>
+  <br class="clear">
+
+  <div class="article-footer-push"></div>
+</div>
