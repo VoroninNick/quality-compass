@@ -373,3 +373,20 @@
     cursor: pointer;
   }
 }
+
+
+.html_safe{
+  margin-top: 1em;
+  margin-bottom: 1em;
+  div,
+  span,
+  p,
+  ul,
+  li,
+  a{
+    color: #353535 !important;
+    -webkit-font-smoothing: $text-block-antialaising;
+    font-weight: 300 !important;
+    @include text-render;
+  }
+}
