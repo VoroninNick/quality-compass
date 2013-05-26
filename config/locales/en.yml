@@ -8,8 +8,12 @@ en:
       slide: "Home page slides"
       text: "Texts editor"
     attributes:
-      user:
-        login: "Handle"
+      article:
+        name: "Publication name"
+        short_description: "Publication short description (displayed @ home page)"
+        full_description: "Publication full description"
+        avatar: "Main image"
+        published: "Published?"
   system:
     login_heading: "Please login to manage system"
     name: "e-mail or nickname"
@@ -40,6 +44,7 @@ en:
 
   main:
     menu:
+      home: "Home"
       first_nav: "About"
       second_nav: "Services"
       third_nav: "Publications"
@@ -60,3 +65,5 @@ en:
       excursions: "Excursions"
       training: "Training"
       media_solutions: "Media solutions"
+  news:
+    latest: "Other news in you region"
