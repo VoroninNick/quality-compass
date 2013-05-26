@@ -5,6 +5,6 @@ class NotificationsMailer < ActionMailer::Base
 
   def new_order(p)
     @details = p
-    mail(:subject => "#Order request from [#{p.company}]. Message send from your website.", :from => p.email)
+    mail(:subject => "#Order request from [#{p.company}]. Message send from your website.", :reply_to => p.email)
   end
 end
