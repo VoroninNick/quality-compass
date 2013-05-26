@@ -484,3 +484,95 @@
     }
   }
 }
+
+
+
+#about-page{
+  @extend .clearfix;
+  .about-holder{
+    @extend .container;
+    h1{
+      @extend .alpha;
+    }
+    .about-first-section-avatar{
+      @extend .g3;
+      @extend .alpha;
+      @media (min-width: 1px) and (max-width: 720px) {
+        @include make-full-width;
+      }
+      text-align: center;
+      img{
+        width: 100%;
+        max-width: 250px;
+      }
+    }
+    .about-first-section-description{
+      @extend .g9;
+      @extend .omega;
+      @media (min-width: 1px) and (max-width: 720px) {
+        @include make-full-width;
+      }
+      p{
+        font-weight: 300;
+        margin-top: 1em;
+        -webkit-font-smoothing: $text-block-antialaising;
+        @media  (min-width: 960px){
+          @include text-render;
+        }
+        @media  (min-width: 1200px) and (max-width: 1920px){
+          @include text-render;
+        }
+        @media  (min-width: 1px) and (max-width: 959px){}
+        i{
+
+        }
+      }
+    }
+
+    .about-item-section{
+      @extend .g4;
+      @media (min-width: 1px) and (max-width: 720px) {
+        @include make-full-width;
+      }
+      p{
+        font-weight: 300;
+        margin-top: 1em;
+        -webkit-font-smoothing: $text-block-antialaising;
+        @media  (min-width: 960px){
+          @include text-render;
+        }
+        @media  (min-width: 1200px) and (max-width: 1920px){
+          @include text-render;
+        }
+        @media  (min-width: 1px) and (max-width: 959px){}
+        i{
+
+        }
+      }
+    }
+    .about-pusher{
+      @extend .clearfix;
+      height: 10px;
+      margin: 1em 0;
+    }
+    .about-last-section-description{
+      @extend .g12;
+      @extend .alpha;
+      p{
+        font-weight: 300;
+        margin-top: 1em;
+        -webkit-font-smoothing: $text-block-antialaising;
+        @media  (min-width: 960px){
+          @include text-render;
+        }
+        @media  (min-width: 1200px) and (max-width: 1920px){
+          @include text-render;
+        }
+        @media  (min-width: 1px) and (max-width: 959px){}
+        i{
+
+        }
+      }
+    }
+  }
+}
