@@ -10,7 +10,7 @@ class PageController < ApplicationController
   end
 
   def contact
-  	@order = Order.new
+    @order = Order.new
   end
 
   # Dont use THIS!!!!
