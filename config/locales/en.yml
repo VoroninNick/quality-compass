@@ -34,8 +34,8 @@ en:
     form_header: "Request form"
 
   placeholders:
-    name: "Voronin Nick"
-    company: "Voronin Design Studio"
+    name: "Oleh Dzhuryk"
+    company: "qualitykompass llc"
     body: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
 
   index-page:
