@@ -9,5 +9,6 @@ class PageController < ApplicationController
   end
 
   def contact
+  	@order = Order.new
   end
 end

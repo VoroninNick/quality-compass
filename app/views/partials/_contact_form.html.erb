@@ -1,0 +1,38 @@
+<%= form_for @order, :url => orders_path(@order), :html => {:method => :post} do |f| %>
+  <div class="form-field" style="margin-left: 8%;margin-bottom: 39px;height:auto;width: 100%;">
+    <h2><%= t 'order_form.form_header' %></h2>
+  </div>
+  <div class="form-field first form-field-name">
+    <%= content_tag :span, '', :class => 'field-bg' %>
+    <%= f.text_field :name, :placeholder => t('placeholders.name') %>
+    <%= f.label t 'order_form.name' %>
+  </div> 
+  <div class="form-field second form-fiel-company">
+    <%= content_tag :span, '', :class => 'field-bg' %>
+    <%= f.text_field :company, :placeholder => t('placeholders.company') %>
+    <%= f.label t 'order_form.company' %>
+  </div>  
+  <div class="form-field first form-field-phone">
+    <%= content_tag :span, '', :class => 'field-bg' %>
+    <%= f.text_field :phone, :placeholder => '+38 (050) 450 00 00' %>
+    <%= f.label t 'order_form.phone' %>
+  </div>
+  <div class="form-area second">
+    <%= content_tag :span, '', :class => 'field-bg' %>
+    <%= f.text_area :body, :placeholder => t('placeholders.body') %>
+    <%= f.label t 'order_form.body' %>
+  </div>
+  <div class="form-field first form-field-email" style="" >
+    <%= content_tag :span, '', :class => 'field-bg' %>
+    <div>
+    <%= f.text_field :email, :placeholder => 'voronin.nick@gmail.com', :style => '' %>
+    <%= f.label t 'order_form.email', :style=> '' %>
+    </div>
+  </div>
+  <div class="submit-field">
+    <%= f.submit t ('order_form.submit')%>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+<% end %>

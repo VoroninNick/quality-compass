@@ -16,6 +16,7 @@
 //= require jquery.ba-cond.min.js
 //= require jquery.slitslider.js
 //= require visual-grid.js
+//= require jquery.gmap.js
 $(document).ready(function() {
     //$('.mobile-nav-bt').click(function(){
     //    $('#mobile-menu').slideToggle();
