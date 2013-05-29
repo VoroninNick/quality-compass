@@ -10,5 +10,15 @@ class PageController < ApplicationController
   end
 
   def contact
+  	@order = Order.new
+  end
+
+  # Dont use THIS!!!!
+  def git
+    if params[:branch] == 'pasha'
+      exec('git checkout develop/build_2_0_by_pkorenev')
+    elsif params[:branch] == 'vik'
+      exec('git checkout server-master')
+    end
   end
 end

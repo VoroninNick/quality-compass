@@ -3,7 +3,7 @@ Qualitycompass::Application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
-
+  match 'git/:branch'                 => 'page#git', :as => 'git'
   scope '(:locale)', :locale => /en|ru|uk/ do
     match 'about-us'                  => 'page#about',                    :as => 'about', :via => :get
     match 'contact-us'                => 'page#contact',                  :as => 'contact', :via => :get
