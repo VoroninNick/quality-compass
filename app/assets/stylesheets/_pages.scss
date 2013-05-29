@@ -425,8 +425,8 @@
       .map-bg{
         background:#e8e8e8;
         width: 100%;
-        height: 360px;
-        margin-top: 30px;
+        height: 400px;
+        margin-top: 40px;
         position:absolute;
         display: block;
       }
@@ -438,7 +438,7 @@
 
         width: 90%;
         max-width:1440px; 
-        height: 420px;
+        height: 480px;
         z-index: 2;
         //max-width: 1580px;
         margin-right: auto;
@@ -479,6 +479,12 @@
           padding-left:0;
           padding-right:0;
         }
+        .form-field.form-title{
+          margin-left:4%;
+          margin-bottom: 39px;
+          height:auto;
+          width: 96%;
+        }
         .form-field{
           float: left;
           width: 50%;
@@ -496,6 +502,7 @@
           h2{
             color: #ffffff;
           }
+
           input{
             float: none;
             //width: 90%;

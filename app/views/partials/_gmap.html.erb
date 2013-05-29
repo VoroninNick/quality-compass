@@ -95,10 +95,20 @@ $.ajax('http://maps.google.com/maps/api/geocode/xml?address=Городоцька
 	
 });
 /* temporarily commenthed  because of absent Internet connection */
-$(window).resize(function(){
-	var h=window.innerHeight;
-	$('#map').css('max-height',h);
-	console.log('h:'+h);
-})
+function initMapSize(){
+    var h=window.innerHeight;
+    $('#map').css('max-height',h);
+    //console.log('h:'+h);
+    var height=$('#map').outerHeight();
+    var bg_height=height / 480 * 400;
+    $('.map-bg').css({'max-height':bg_height + 'px', 'margin-top':(height-bg_height)/2 + 'px' });
+
+}
+$(document).ready(function(){
+    initMapSize();
+    $(window).resize(function(){
+	   initMapSize();
+    });
+});
 
 </script>
