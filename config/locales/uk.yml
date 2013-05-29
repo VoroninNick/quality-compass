@@ -1,7 +1,7 @@
 # Sample localization file for English. Add more files in this directory for other locales.
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
-en:
+uk:
   activerecord:
     models:
       article: "News and publications"
@@ -43,11 +43,11 @@ en:
     read-more: "read more ..."
 
   contact-page:
-      page_title: "We at Google map:"
-      main_title: "Contact details"
-      address_field: "Address:"
-      hours_field: "Working hours:"
-      contact_field: "Phones:"
+    page_title: "Ми на Google карті:"
+    main_title: "Контактна інформація"
+    address_field: "Адреса:"
+    hours_field: "Графік роботи:"
+    contact_field: "Телефони:"
 
   main:
     menu:

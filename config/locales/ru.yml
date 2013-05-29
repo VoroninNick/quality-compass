@@ -20,6 +20,13 @@ ru:
     news-heading: "Последние новости"
     read-more: "читать больше ..."
 
+  contact-page:
+      page_title: "Мы на Google карте:"
+      main_title: "Контактная информация"
+      address_field: "Адрес:"
+      hours_field: "График работы:"
+      contact_field: "Телефоны:"
+
   main:
     menu:
       first_nav: "Про нас"

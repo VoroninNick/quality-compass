@@ -1,114 +1,114 @@
- <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script> 
-<!-- temporarily commenthed  because of absent Internet connection -->
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+
 <div id="gmap-wrapper" class="">
   <div class="g12">
-    <h2 class="title"><%= image_tag('heading-arrow.png') %>Ми на Google карті:</h2>
+    <h2 class="title"><%= image_tag('heading-arrow.png') %><%= t('contact-page.page_title') %></h2>
   </div>
   <div class="g12" id="map-container">
     <div class="map-bg"></div>
     <div id="map">
     
     </div>
+  </div>
+  <div class="clearfix"></div>
 </div>
 
-<div class="clearfix"></div>
-</div>
+
 <script type="text/javascript">
+  $.ajax('http://maps.google.com/maps/api/geocode/xml?address=Городоцька%20357&sensor=false',
+    {success:function(xml){
+      fullxml=xml;
+      if($('status',xml).text()=='OK')
+      {
 
-$.ajax('http://maps.google.com/maps/api/geocode/xml?address=Городоцька%20357&sensor=false',
-	{success:function(xml){
-		fullxml=xml;
-		if($('status',xml).text()=='OK')
-		{
+        //console.log('lat:'+';lng:');
+        var lat=$('geometry location lat',xml).text() * 1;
+        var lng=$('geometry location lng',xml).text() * 1;
+        //console.log('lat:'+(''+lat)+';lng:'+lng);
+        //alert('lat:'+lat+';lng:'+lng);
+        //var map=new GMaps({
+          //	el: '#map',
+          //	lat: lat,
+          //	lng: lng
+        //});
 
-			//console.log('lat:'+';lng:');
-			var lat=$('geometry location lat',xml).text() * 1;
-			var lng=$('geometry location lng',xml).text() * 1;
-			//console.log('lat:'+(''+lat)+';lng:'+lng);
-			//alert('lat:'+lat+';lng:'+lng);		
-			//var map=new GMaps({
-  			//	el: '#map',
-  			//	lat: lat,
-  			//	lng: lng
-			//});
+        //var myLatlng = new google.maps.LatLng(lat, lng);
 
-			//var myLatlng = new google.maps.LatLng(lat, lng);
+        //var marker = new google.maps.Marker({
+          // 	position: myLatlng,
+          //	map: map,
+          //	title:"Hello World!"
+        //});
 
-			//var marker = new google.maps.Marker({
-   			// 	position: myLatlng,
-    		//	map: map,
-    		//	title:"Hello World!" 
-			//});
-			
-				var myLatlng = new google.maps.LatLng(lat, lng);
-				var myOptions = {
-        			zoom: 15,
-        			center: [lat,lng],
-        			mapTypeId: google.maps.MapTypeId.ROADMAP
-    			};
-    			//var map = new google.maps.Map(document.getElementById("map"), myOptions);
+          var myLatlng = new google.maps.LatLng(lat, lng);
+          var myOptions = {
+                zoom: 15,
+                center: [lat,lng],
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            //var map = new google.maps.Map(document.getElementById("map"), myOptions);
 
-    			//var marker = new google.maps.Marker({
-    			//	position: myLatlng,
-    			//	map: map,
-    			//	title:"Гуртівня будівельних товарів \"Десятка\"",
-    			//	events:{
-    			//		click:function(){
-    			//			console.log('gmaps.click');
-    			//		}
-    			//	} 
-				//}); 
- 				
- 				
+            //var marker = new google.maps.Marker({
+            //	position: myLatlng,
+            //	map: map,
+            //	title:"Гуртівня будівельних товарів \"Десятка\"",
+            //	events:{
+            //		click:function(){
+            //			console.log('gmaps.click');
+            //		}
+            //	}
+          //});
 
- 				$('#map').gmap3({
- 					map:{
-    					options:myOptions
-    				},
-    				marker:{
-    						values:[
-    							{latLng:[lat,lng],data:"Гуртівня будівельних товарів \"Десятка\""}
-    						],
-    						options:{
-    							draggable:false
-    						},
-    						events:{
-    							click:function(marker,event,context){
-    								console.log('gmaps.click');
-    								my={marker:marker,event:event,context:context};
-    							},
-    							mouseover:function(marker,event,context){
-    								
-    							},	
-    							mouseout:function(){
 
-    							}
-    						}
-    					}
-    				});
 
- 				
-}
-//initialize();
-		
-		}
-	
-});
-/* temporarily commenthed  because of absent Internet connection */
-function initMapSize(){
-    var h=window.innerHeight;
-    $('#map').css('max-height',h);
-    //console.log('h:'+h);
-    var height=$('#map').outerHeight();
-    var bg_height=height / 480 * 400;
-    $('.map-bg').css({'max-height':bg_height + 'px', 'margin-top':(height-bg_height)/2 + 'px' });
+          $('#map').gmap3({
+            map:{
+                options:myOptions
+              },
+              marker:{
+                  values:[
+                    {latLng:[lat,lng],data:"Гуртівня будівельних товарів \"Десятка\""}
+                  ],
+                  options:{
+                    draggable:false
+                  },
+                  events:{
+                    click:function(marker,event,context){
+                      console.log('gmaps.click');
+                      my={marker:marker,event:event,context:context};
+                    },
+                    mouseover:function(marker,event,context){
 
-}
-$(document).ready(function(){
-    initMapSize();
-    $(window).resize(function(){
-	   initMapSize();
-    });
-});
+                    },
+                    mouseout:function(){
 
+                    }
+                  }
+                }
+              });
+
+
+  }
+  //initialize();
+
+      }
+
+  });
+  /* temporarily commenthed  because of absent Internet connection */
+  function initMapSize(){
+      var h=window.innerHeight;
+      $('#map').css('max-height',h);
+      //console.log('h:'+h);
+      var height=$('#map').outerHeight();
+      var bg_height=height / 480 * 400;
+      $('.map-bg').css({'max-height':bg_height + 'px', 'margin-top':(height-bg_height)/2 + 'px' });
+  }
+
+  $(document).ready(function(){
+      initMapSize();
+      $(window).resize(function(){
+       initMapSize();
+      });
+  });
 </script>
