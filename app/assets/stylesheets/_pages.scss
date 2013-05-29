@@ -480,10 +480,16 @@
           padding-right:0;
         }
         .form-field.form-title{
-          margin-left:4%;
+          margin-left:0;
           margin-bottom: 39px;
           height:auto;
-          width: 96%;
+          width: 100%;
+
+          h2{
+            width: 90%;
+            margin-left: 5%;
+            margin-right: 5%;
+          }
         }
         .form-field{
           float: left;
