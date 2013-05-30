@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'bundler'
 gem 'rails', '3.2.13'
 gem 'rails_admin' #, :github => 'sferik/rails_admin'
 gem 'devise'
@@ -16,6 +17,7 @@ gem 'rename'
 gem 'globalize3'
 gem 'rails_admin_globalize', :github => 'voroninstudio/rails_admin_globalize'
 gem 'haml-rails'
+gem 'browser'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

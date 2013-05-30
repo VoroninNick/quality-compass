@@ -63,6 +63,7 @@ GEM
       debug_inspector (>= 0.0.1)
     bootstrap-sass (2.3.1.0)
       sass (~> 3.2)
+    browser (0.1.6)
     builder (3.0.4)
     callsite (0.0.11)
     ckeditor (4.0.4)
@@ -223,6 +224,8 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   binding_of_caller
+  browser
+  bundler
   ckeditor
   coffee-rails (~> 3.2.1)
   devise
