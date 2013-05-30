@@ -186,6 +186,46 @@
 
         }
       }
+
+
+
+      div#subscribe-form{
+        input#order_email{
+          color: #EE3343;
+          font-style: italic;
+          font-weight: 400;
+          height: 60px;
+          padding: 0 1em;
+          position: relative;
+          width: 75%;
+          background:#0136A3;
+          margin:0;
+        }
+
+        label{
+          color: white;
+          font-size: 0.85em;
+          font-style: italic;
+          font-weight: 400;
+          padding: 0 1em;
+          text-transform: lowercase;
+          width: 100%;
+        }
+
+        input#submit{
+          background-image: -moz-linear-gradient(center bottom , #840D20 0%, #EB1C38 100%);
+          color: #FFFFFF;
+          font-size: 1.6em;
+          font-weight: 800;
+          //padding-left:  1.5em;
+          //padding-right: 1.5em;
+          padding-top:0.325em;
+          padding-bottom:15px;
+          width: 25%;
+          margin: 0 0 0 -4px;
+          text-align:center;
+        }
+      }
     }
   }
 }

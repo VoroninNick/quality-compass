@@ -24,7 +24,16 @@
       <ul>
         <li><%= link_to 'Linkedin', linkedin_path, :title => 'Linkedin' %></li>
         <li><%= link_to 'Facebook', facebook_path, :title => 'Facebook' %></li>
-        <li><%= link_to 'Subscribe ', subscribe_path, :title => 'Subscribe' %></li>
+        <li><%= link_to 'Subscribe ', subscribe_path, :title => 'Subscribe', :id => 'subscribe-link' %>
+          <div id="subscribe-form" style="display:none;">
+            <form method="post" id="new_order" class="new_order" action="/order" accept-charset="UTF-8">
+              <input type="text" size="30" placeholder="voronin.nick@gmail.com" name="order[email]" id="order_email"/>
+              <input type="submit" value="S" name="commit" id="submit"/>
+              <label for="order_e-mail">E-mail</label>
+              
+            </form>
+          </div>
+        </li>
       </ul>
     </div>
     <div class="g3 footer-item omega">
@@ -52,4 +61,19 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $('#main-footer #subscribe-link').click(function(event){
+    event.preventDefault();
+    var $form= $('#main-footer #subscribe-form');
+    if($form.css('display')=='none'){
+      $form.slideDown();
+    }
+    else{
+      $form.slideUp();
+    }
+  });
+});
+</script>
 <!-- /Footer section -->
