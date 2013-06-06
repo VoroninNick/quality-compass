@@ -1,0 +1,8 @@
+<response>
+	<result valid="<%= @valid %>" exists="<%= @exists %>"><%= @result_message %></result>
+	<errors>
+		<% @errors.each do |field,description| %>
+			<error field="<%= field %>" description="<%= description %>"></error>
+		<% end %>
+	</errors>
+</response>

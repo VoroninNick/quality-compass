@@ -28,17 +28,13 @@
           <div id="send-request-overlay"></div>
           <div id="subscribe-form" style="display:none;">
             <%= form_for @subscribe, :url => subscribe_path, :html => {:method => :post} do |f| %>
-              <div class="field email">
-                <%= content_tag :span, '', :class => 'field-bg' %>
-                <%= f.text_field :email, :placeholder => 'nick@voroninstudio.eu',:data => { 
-                  :validation => "validate_email", 'validation-error-msg' => 'Your email address does not appear to be valid', :label => 'email' }  %>
-                <%= f.label 'email', :id => 'subscriber_email_err_msg' %>
-              </div>
-              <div class="field submit">
-                <%= f.submit 'S'%>
-              </div>
+              <%= content_tag :span, '', :class => 'field-bg' %>
+              <%= f.text_field :email, :placeholder => 'nick@voroninstudio.eu',:data => { 
+                :validation => "email", 'error-message' => 'Your email address does not appear to be valid', :label => 'email' }  %>
+              <%= f.submit 'S'%>
+              <%= f.label 'email' %>
+              
             <% end %>
-            <div class="clearfix"></div>
           </div>
         </li>
       </ul>
@@ -72,69 +68,37 @@
 <script type="text/javascript">
 $(document).ready(function(){
   var $subscribe_container = $('#main-footer ul li.subscribe-container');
-  var $subscribe_form= $('#main-footer #subscribe-form ');
+  var $subscribe_form= $('#main-footer #subscribe-form');
 
-  //function validate_string(string, validate_type){
-  //  var exp=/(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
+  function validate_string(string, validate_type){
+    var exp=/(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
     
-  //  if(!exp.test(str!='') && str!=''){
-  //    return false;
-  //  }
-  //  else{
-  //    return true;
-  //  }
-  //}
-  //function validate($input){
-  //  var str = $input.val();
-  //  validate_string  
-  //}
-  //$('#subscriber_email').blur(function(){
-  //  var $this = $(this);
-    //console.log('change');
-    //if(!validate($this)){
-    //  $('label[for=subscriber_email]').text($('#subscriber_email').attr('data-error-message'));
-    //}
-    //else{
-    //  $('label[for=subscriber_email]').text($('#subscriber_email').attr('data-label'));
-    //}
-  //});
-$('#subscribe-form form').find('textarea,input,select').each(function(){
-  $(this).doValidate();
-});
-
-//var $el = $(this);
-            $subscribe_form.find('textarea,input,select').change(function() {
-                       $(this).doValidate();
-                    });
-
-            $subscribe_form.find('textarea,input,select').blur(function() {
-                       $(this).doValidate();
-                    });
-            $subscribe_form.find('textarea,input,select').change(function() {
-                       console.log('valid:'+ jQueryFormUtils.validateEmail($(this).text() ));
-                    });
-
-            $subscribe_form.find('textarea,input,select').change(function() {
-                       console.log('change event');
-                    });
-
-            $subscribe_form.find('textarea,input,select').keyup(function() {
-                       var $this=$(this);
-                       //$this.doValidate();
-                       var email = $this.val();
-                       var valid = jQueryFormUtils.validateEmail(email);
-                       console.log('keyup_event: ' + $this.val());
-                    });
-
-
+    if(!exp.test(str!='') && str!=''){
+      return false;
+    }
+    else{
+      return true;
+    }
+  }
+  function validate($input){
+    var str = $input.val();
+    validate_string  
+  }
+  $('#subscriber_email').blur(function(){
+    var $this = $(this);
+    console.log('change');
+    if(!validate($this)){
+      $('label[for=subscriber_email]').text($('#subscriber_email').attr('data-error-message'));
+    }
+    else{
+      $('label[for=subscriber_email]').text($('#subscriber_email').attr('data-label'));
+    }
+  });
   $subscribe_form.submit(function(event){
         event.preventDefault();
         var handler = '/subscribe.xml';
         var email = $subscribe_container.find('#subscriber_email').val();
-        //if(!validate('email'))
-
-        //if($subscribe_form.find('input.error').length==0){
-          if(jQueryFormUtils.validateEmail(email)){
+        if(!validate('email'))
         $.ajax(
           handler,
           { 
@@ -143,16 +107,14 @@ $('#subscribe-form form').find('textarea,input,select').each(function(){
             success:function(data){
               
               var $response = $(data);
-              if( $response.find('result[valid=true]').length == 1 ){
+              if($response.find('result').text() == 'true'){
                 //alert('successfully subscribed!');  
-                $('label[for=subscriber_email]').text(error_description).css('color','white');
               }
               else{
                 //alert('You have entered invalid email address');
                 var error_description='';
                 //$response.find('errors error').each(function(error){
                   error_description = $response.find('errors error').filter('[field=email]').attr('description');
-
                 //});
                 $('label[for=subscriber_email]').text(error_description).css('color','red');
               }
@@ -161,17 +123,16 @@ $('#subscribe-form form').find('textarea,input,select').each(function(){
               alert('Cannot connect to server. Please check your Internet connection.');
             },
             complete:function(){
-              //$('.subscribe-container #send-request-overlay').hide();
+              $('.subscribe-container #send-request-overlay').hide();
             }
           });
-        }
 
           
           
-          //var $subscribe_overlay=$('#subscribe-container #send-request-overlay');
-          //$('.subscribe-container #send-request-overlay').outerWidth($('#subscribe-form').outerWidth());
-          //$('.subscribe-container #send-request-overlay').outerHeight($('#subscribe-form').outerHeight());
-          //$subscribe_overlay.show();
+          var $subscribe_overlay=$('#subscribe-container #send-request-overlay');
+          $('.subscribe-container #send-request-overlay').outerWidth($('#subscribe-form').outerWidth());
+          $('.subscribe-container #send-request-overlay').outerHeight($('#subscribe-form').outerHeight());
+          $subscribe_overlay.show();
       });
   
   $('#main-footer #subscribe-link').click(function(event){

@@ -18,6 +18,7 @@
 //= require visual-grid.js
 //= require jquery.easing.min.js
 //= require jquery.gmap.js
+//= require jquery.formvalidator.js
 $(document).ready(function() {
     //$('.mobile-nav-bt').click(function(){
     //    $('#mobile-menu').slideToggle();

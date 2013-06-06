@@ -188,17 +188,54 @@
       }
 
 
+    li.subscribe-container{
+    }
+
+    li.subscribe-container.active{
+
+      background:#2d4994;
+
+      padding:5px;
+
+      #send-request-overlay{
+        position:absolute;
+        width: auto;
+        height: 100%;
+        background:rgba(255,255,255,0.8);
+        z-index: 3;
+      }
+
+      a{
+        color:white;
+      }
 
       div#subscribe-form{
-        input#order_email{
+          div.jquery_form_error_message{
+            display: none;
+          }
+        
+        div.field{
+          float:left;
+          position:relative;
+
+        }
+        div.field.email{
+          width:74%;
+        }
+        div.field.submit{
+          width: 25%;
+          margin: 0 0 0 -4px;
+          float:right;
+        }
+        input#subscriber_email{
           color: #EE3343;
           font-style: italic;
           font-weight: 400;
           height: 60px;
           padding: 0 1em;
           position: relative;
-          width: 75%;
-          background:#0136A3;
+          width: 100%;
+          //background:#0136A3;
           margin:0;
         }
 
@@ -208,12 +245,22 @@
           font-style: italic;
           font-weight: 400;
           padding: 0 1em;
-          text-transform: lowercase;
+          //text-transform: lowercase;
           width: 100%;
+          clear: both;
+          display: block;
         }
 
-        input#submit{
-          background-image: -moz-linear-gradient(center bottom , #840D20 0%, #EB1C38 100%);
+        input[type="submit"]{
+          height: 60px;
+          width: 100%;
+          
+          background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSI1MCUiIHkxPSIxMDAlIiB4Mj0iNTAlIiB5Mj0iLTEuNDIxMDg1NDcxNTIwMmUtMTQlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzZkMWIyMyIgc3RvcC1vcGFjaXR5PSIxIi8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2MzMzU0MSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgIDwvbGluZWFyR3JhZGllbnQ+Cgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNoYXQwKSIgLz4KPC9zdmc+);
+          background-image: -moz-linear-gradient(bottom, #840d20 0%, #eb1c38 100%);
+          background-image: -o-linear-gradient(bottom, #840d20 0%, #eb1c38 100%);
+          background-image: -webkit-linear-gradient(bottom, #840d20 0%, #eb1c38 100%);
+          background-image: linear-gradient(bottom, #840d20 0%, #eb1c38 100%);
+          
           color: #FFFFFF;
           font-size: 1.6em;
           font-weight: 800;
@@ -221,11 +268,12 @@
           //padding-right: 1.5em;
           padding-top:0.325em;
           padding-bottom:15px;
-          width: 25%;
-          margin: 0 0 0 -4px;
+          
           text-align:center;
+          
         }
       }
+    }
     }
   }
 }

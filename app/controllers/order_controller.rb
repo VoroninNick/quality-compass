@@ -1,6 +1,7 @@
 class OrderController < ApplicationController
   def new
     @order = Order.new
+    @subscribe = Subscriber.new
   end
 
   def create

@@ -5,6 +5,10 @@ class ApplicationController < ActionController::Base
 
   helper_method :get_text
 
+ 
+  #def initialize
+   # @subscribe = Subscriber.new
+  #end
   def get_text(id)
     @text = Text.find(id)
   end

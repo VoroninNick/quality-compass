@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130516142918) do
+ActiveRecord::Schema.define(:version => 20130530134839) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -125,6 +125,12 @@ ActiveRecord::Schema.define(:version => 20130516142918) do
     t.string   "slice2_rotation"
     t.string   "slice1_scale"
     t.string   "slice2_scale"
+  end
+
+  create_table "subscribers", :force => true do |t|
+    t.string   "email"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "text_translations", :force => true do |t|

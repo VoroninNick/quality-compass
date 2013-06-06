@@ -1,4 +1,5 @@
 Qualitycompass::Application.routes.draw do
+
   devise_for :admins
   mount Ckeditor::Engine => '/ckeditor'
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
@@ -13,7 +14,8 @@ Qualitycompass::Application.routes.draw do
     match '~facebook/quality-compass'   => redirect('http://facebook.com'), :as => 'facebook'
     match '~linkedin/quality-compass'   => redirect('http://linkedin.com'), :as => 'linkedin'
     match '~twitter/quality-compass'    => redirect('http://twitter.com'),  :as => 'twitter'
-    match 'subscribe'                   => 'page#index',                    :as => 'subscribe'
+    match 'subscribe'                   => 'subscriber#form',                    :as => 'subscribe', :via => :get
+    match 'subscribe(.:format)'                   => 'subscriber#subscribe',          :via => :post
     # Develop function
     match 'git/:branch'                 => 'page#git',                      :as => 'git'
     root :to                            => 'page#index'

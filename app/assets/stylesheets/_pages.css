@@ -1,0 +1,75 @@
+/*
+Syntax error: Undefined mixin 'holders'.
+        on line 4 of _pages.scss, in `holders'
+        from line 4 of _pages.scss
+
+1: #index-page-erb{
+2: 
+3:   .proverb-holder{
+4:     @include holders;
+5:     @extend .clearfix;
+6:     @extend .container;
+7: 
+8:     margin-bottom:4em;
+9:     .proverb-item{
+
+Backtrace:
+_pages.scss:4:in `holders'
+_pages.scss:4
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:253:in `visit_mixin'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/tree/visitors/base.rb:37:in `visit'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/tree/visitors/base.rb:53:in `map'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/tree/visitors/base.rb:37:in `visit'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/tree/visitors/base.rb:53:in `map'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/tree/visitors/base.rb:37:in `visit'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/tree/visitors/base.rb:53:in `map'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/tree/visitors/base.rb:37:in `visit'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/tree/root_node.rb:20:in `render'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/engine.rb:315:in `_render'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/engine.rb:262:in `render'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/plugin/compiler.rb:362:in `update_stylesheet'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/plugin/compiler.rb:201:in `each'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/plugin/compiler.rb:235:in `watch'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/plugin.rb:107:in `method_missing'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/exec.rb:452:in `watch_or_update'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/exec.rb:315:in `process_result'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/exec.rb:41:in `parse'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/lib/sass/exec.rb:21:in `parse!'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.9/bin/sass:9:in `<top (required)>'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/bin/sass:19:in `load'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/bin/sass:19:in `<main>'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/bin/ruby_noexec_wrapper:14:in `eval'
+/home/vikewoods/.rvm/gems/ruby-1.9.3-p374/bin/ruby_noexec_wrapper:14:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined mixin 'holders'.\A         on line 4 of _pages.scss, in `holders'\A         from line 4 of _pages.scss\A \A 1: #index-page-erb{\A 2: \A 3:   .proverb-holder{\A 4:     @include holders;\A 5:     @extend .clearfix;\A 6:     @extend .container;\A 7: \A 8:     margin-bottom:4em;\A 9:     .proverb-item{"; }

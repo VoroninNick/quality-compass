@@ -1,0 +1,18 @@
+<%= form_for @subscribe, :url => subscribe_path(@order), :html => {:method => :post} do |f| %>
+  <div class="form-field form-title">
+    <h2><%= 'Subscribe' %></h2>
+  </div>
+  <div class="form-field first form-field-email" style="" >
+    <%= content_tag :span, '', :class => 'field-bg' %>
+    <div>
+    <%= f.text_field :email, :placeholder => 'voronin.nick@gmail.com', :style => '' %>
+    <%= f.label 'email', :style=> '' %>
+    </div>
+  </div>
+  <div class="submit-field">
+    <%= f.submit 'Submit'%>
+  </div>
+</div><!-- What for ? -->
+
+<div class="clearfix"></div>
+<% end %>

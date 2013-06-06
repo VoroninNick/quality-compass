@@ -4,13 +4,16 @@ class PageController < ApplicationController
     @order = Order.new
     @last_news ||= Article.last(4)
     @slides ||= Slide.find(:all, :limit => 5)
+    @subscribe = Subscriber.new
   end
 
   def about
+    @subscribe = Subscriber.new
   end
 
   def contact
     @order = Order.new
+    @subscribe = Subscriber.new
   end
 
   # Dont use THIS!!!!
