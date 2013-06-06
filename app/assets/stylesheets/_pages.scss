@@ -236,114 +236,7 @@
     }
 
     .form-block{
-      background: #2d4994;
-      @media  (min-width: 1px) and (max-width: 720px){
-        @include make-full-width;
-        margin-bottom: 1em;
-        border-left: 0;
-        padding-top: 0;
-        padding-bottom: 0;
-        padding-left: 0;
-      }
-      form{
-        padding: 39px;
-        @media  (min-width: 1px) and (max-width: 720px){
-          padding: 1.5em;
-        }
-        .form-first-field{
-          margin-bottom: 39px;
-          height: auto !important;
-        }
-        .form-field{
-          width: 100%;
-          height: 100px;
-          .field-bg{
-            position: absolute;
-            background: #274082;
-            width: 100%;
-            height: 40px;
-            left: 0;
-            margin-top: 10px;
-            display: block;
-          }
-          h2{
-            color: #ffffff;
-          }
-          input{
-            width: 100%;
-            height: 60px;
-            padding: 0 1em;
-            color: #ee3343;
-            font-style: italic;
-            font-weight: 400;
-            position: relative;
-          }
-          label{
-            width: 100%;
-            color: white;
-            font-style: italic;
-            font-size: 0.85em;
-            font-weight: 400;
-            text-transform: lowercase;
-            padding: 0 1em;
-          }
-          textarea{
-            width: 100%;
-            height: 150px;
-            padding: 1em;
-            color: #ee3343;
-            font-style: italic;
-            font-weight: 400;
-            position: relative;
-          }
-        }
-        .form-area{
-          width: 100%;
-          height: 190px;
-          .field-bg{
-            position: absolute;
-            background: #274082;
-            width: 100%;
-            height: 40px;
-            left: 0;
-            margin-top: 10px;
-            display: block;
-          }
-          textarea{
-            width: 100%;
-            height: 150px;
-            padding: 1em;
-            color: #ee3343;
-            font-style: italic;
-            font-weight: 400;
-            position: relative;
-          }
-          label{
-            width: 100%;
-            color: white;
-            font-style: italic;
-            font-size: 0.85em;
-            font-weight: 300;
-            text-transform: lowercase;
-            padding: 0 1em;
-          }
-        }
-        .submit-field{
-          text-align: right;
-          margin-top: 0;
-          input{
-            background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSI1MCUiIHkxPSIxMDAlIiB4Mj0iNTAlIiB5Mj0iLTEuNDIxMDg1NDcxNTIwMmUtMTQlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzZkMWIyMyIgc3RvcC1vcGFjaXR5PSIxIi8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2MzMzU0MSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgIDwvbGluZWFyR3JhZGllbnQ+Cgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNoYXQwKSIgLz4KPC9zdmc+);
-            background-image: -moz-linear-gradient(bottom, #840d20 0%, #eb1c38 100%);
-            background-image: -o-linear-gradient(bottom, #840d20 0%, #eb1c38 100%);
-            background-image: -webkit-linear-gradient(bottom, #840d20 0%, #eb1c38 100%);
-            background-image: linear-gradient(bottom, #840d20 0%, #eb1c38 100%);
-            color: #ffffff;
-            font-size: 1.6em;
-            font-weight: 800;
-            padding: 0.5em 1.5em;
-          }
-        }
-      }
+
     }
 
   }
@@ -608,17 +501,24 @@
         div.columns{
           margin-left: 27px;
         }
+        p{
+          margin-left: 27px;
+        }
       }
 
       @media(min-width:450px) and(max-width:770px) {  
         div.columns{
           margin-left: 27px;
         }
+        p{
+          margin-left:27px;
+        }
       }
 
       h2.title{
         margin-bottom: 0em;
       }
+
       span.position{
         font-size: 0.9em;
         font-style: italic;
@@ -679,217 +579,8 @@
     }
   }
 
-  .form-block{
-      @include holders;
-      @extend .clearfix;
-      @extend .container;
-      margin-top: 2em;
-      margin-bottom:3em;
-      background: #2d4994;
-      position:relative;
-      @media  (min-width: 1px) and (max-width: 720px){
-        @include make-full-width;
-        border-left: 0;
-        padding-top: 0;
-        padding-bottom: 0;
-        padding-left: 0;
-        padding-right:0;
-      }
-      form{
-        padding-top: 39px;
-        padding-bottom:39px;
-        @media  (min-width: 1px) and (max-width: 720px){
-          padding-top: 1.5em;
-          padding-bottom:1.5em;
-          padding-left:0;
-          padding-right:0;
-        }
-        .form-field.form-title{
-          margin-left:0;
-          margin-bottom: 39px;
-          height:auto;
-          width: 100%;
-          h2{
-            width: 90%;
-            margin-left: 5%;
-            margin-right: 5%;
-          }
-        }
-        .form-field{
-          float: left;
-          width: 50%;
-          height: 100px;
-          position:relative;
-          .field-bg{
-            position: absolute;
-            background: #274082;
-            width: 100%;
-            height: 40px;
-            left: 0;
-            margin-top: 10px;
-            display: block;
-          }
-          h2{
-            color: #ffffff;
-          }
-          input{
-            float: none;
-            height: 60px;
-            padding: 0 1em;
-            color: #ee3343;
-            font-style: italic;
-            font-weight: 400;
-            position: relative;
-            z-index: 2;
-          }
-          label{
-            width: 100%;
-            color: white;
-            font-style: italic;
-            font-size: 0.85em;
-            font-weight: 400;
-            text-transform: lowercase;
-            padding: 0 1em;
-          }
-          textarea{
-            height: 160px;
-            padding: 1em;
-            color: #ee3343;
-            font-style: italic;
-            font-weight: 400;
-            position: relative;
-            z-index: 2;
-          }
-        }
-        .form-field.first, 
-        .form-area.first{
-          margin-right: 0;
-          margin-left: 0;
-          textarea,
-          input{
-            position:relative;
-            width: 90%;
-            margin-right: 2%;
-            margin-left:8%;
-          }
-          label{
-            margin-left: 8%;
-          }
-        }
-        .form-field.second,
-        .form-area.second{
-          margin-right: 0%;
-          margin-left: 0%;
-          textarea,
-          input{
-            position:relative;
-            width: 90%;
-          }
-        }
-        .form-area{
-          float: left;
-          width: 50%;
-          height: 190px;
-          .field-bg{
-            position: absolute;
-            background: #274082;
-            width: 100%;
-            height: 40px;
-            left: 0;
-            margin-top: 10px;
-            display: block;
-          }
-          textarea{
-            height: 160px;
-            padding: 1em;
-            color: #ee3343;
-            font-style: italic;
-            font-weight: 400;
-            position: relative;
-            z-index: 2;
-          }
-          label{
-            width: 100%;
-            color: white;
-            font-style: italic;
-            font-size: 0.85em;
-            font-weight: 300;
-            text-transform: lowercase;
-            padding: 0 1em;
-          }
-        }
-        .submit-field{
-          text-align: right;
-          margin-top: 0;
-          input{
-            background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSI1MCUiIHkxPSIxMDAlIiB4Mj0iNTAlIiB5Mj0iLTEuNDIxMDg1NDcxNTIwMmUtMTQlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzZkMWIyMyIgc3RvcC1vcGFjaXR5PSIxIi8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2MzMzU0MSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgIDwvbGluZWFyR3JhZGllbnQ+Cgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNoYXQwKSIgLz4KPC9zdmc+);
-            background-image: -moz-linear-gradient(bottom, #840d20 0%, #eb1c38 100%);
-            background-image: -o-linear-gradient(bottom, #840d20 0%, #eb1c38 100%);
-            background-image: -webkit-linear-gradient(bottom, #840d20 0%, #eb1c38 100%);
-            background-image: linear-gradient(bottom, #840d20 0%, #eb1c38 100%);
-            color: #ffffff;
-            font-size: 1.6em;
-            font-weight: 800;
-            padding: 0.5em 1.5em;
-            margin-right: 5%;
-          }
-        }
-      }
-    }
-
-    @media(max-width:720px){
-        div.form-block{
-          form#new_order{
-            div.form-field,
-            div.form-field.alpha,
-            div.form-field.omega,
-            div.form-area,
-            div.form-area.alpha,
-            div.form-area.omega{
-              width:100%;
-              margin-top:0;
-
-              label{
-                margin-left:8%;
-              }
-              input,
-              textarea{
-                margin-left: 5%;
-                margin-right: 5%;
-                width:90%;
-              }
-            }
-            div.form-field.form-field-email{
-              margin-top: -280px;
-            }
-            div.form-area{
-              margin-top: 90px;
-            }
-            div.submit-field{
-              input{
-                margin-right: 5%;
-              }
-            }
-          }
-        }
-    }
-
-    @media(min-width:721px){
-      div.form-block{
-          form#new_order{
-            div.form-field.form-field-phone{
-              margin-top: -90px;
-              width: 100%;
-
-              div{
-                width:50%;
-              }
-            }
-          }
-        }
-    }
+  
 }
-
 /* end contact page erb
    Author: Pasha
 */
