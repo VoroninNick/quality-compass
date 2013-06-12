@@ -98,11 +98,18 @@
   /* temporarily commenthed  because of absent Internet connection */
   function initMapSize(){
       var h=window.innerHeight;
-      $('#map').css('max-height',h);
+      h = h > 480 ? 480 : h;
+      $('#map').css('height',h);
       //console.log('h:'+h);
+
       var height=$('#map').outerHeight();
       var bg_height=height / 480 * 400;
-      $('.map-bg').css({'max-height':bg_height + 'px', 'margin-top':(height-bg_height)/2 + 'px' });
+      bg_height = bg_height > 400 ? 400 : bg_height;
+      console.log('h:'+h+';bg_height:'+bg_height);
+      var margin_top=(height-bg_height)/2;
+      if($('body').hasClass('opera'))
+        margin_top+=16;
+      $('.map-bg').css({'height':bg_height + 'px', 'margin-top':margin_top + 'px' });
   }
 
   $(document).ready(function(){

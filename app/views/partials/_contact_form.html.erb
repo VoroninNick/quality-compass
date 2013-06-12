@@ -12,21 +12,24 @@
     <%= f.text_field :company, :placeholder => t('placeholders.company') %>
     <%= f.label t 'order_form.company' %>
   </div>  
-  <div class="form-field first form-field-phone">
+  <div class="form-field first form-field-email" style="" >
     <%= content_tag :span, '', :class => 'field-bg' %>
-    <%= f.text_field :phone, :placeholder => '+38 (050) 450 00 00' %>
-    <%= f.label t 'order_form.phone' %>
+    <div>
+    <%= f.text_field :email, :placeholder => 'oleh@qualitykompass.com', :style => '' %>
+    <%= f.label t 'order_form.email', :style=> '' %>
+    </div>
   </div>
   <div class="form-area second">
     <%= content_tag :span, '', :class => 'field-bg' %>
     <%= f.text_area :body, :placeholder => t('placeholders.body') %>
     <%= f.label t 'order_form.body' %>
   </div>
-  <div class="form-field first form-field-email" style="" >
+
+  <div class="form-field first form-field-phone">
     <%= content_tag :span, '', :class => 'field-bg' %>
     <div>
-    <%= f.text_field :email, :placeholder => 'voronin.nick@gmail.com', :style => '' %>
-    <%= f.label t 'order_form.email', :style=> '' %>
+      <%= f.text_field :phone, :placeholder => '+38 067 675 81 18' %>
+      <%= f.label t 'order_form.phone' %>
     </div>
   </div>
   <div class="submit-field">

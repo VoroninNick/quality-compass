@@ -617,7 +617,16 @@
       }
 
       h2.title{
-        margin-bottom: 0.5em;
+        margin-bottom: 0em;
+      }
+      span.position{
+        font-size: 0.9em;
+        font-style: italic;
+        font-weight: 300;
+        margin-top: 0;
+        display: block;
+        margin-left: 27px;
+        text-align:left;
       }
       div.column-properties{
         width:auto;
@@ -652,7 +661,7 @@
       .map-bg{
         background:#e8e8e8;
         width: 100%;
-        height: 400px;
+        max-height: 400px;
         margin-top: 40px;
         position:absolute;
         display: block;
@@ -662,7 +671,7 @@
         @extend .clearfix;
         width: 90%;
         max-width:1440px; 
-        height: 480px;
+        max-height: 480px;
         z-index: 2;
         margin-right: auto;
         margin-left: auto;
@@ -868,7 +877,7 @@
     @media(min-width:721px){
       div.form-block{
           form#new_order{
-            div.form-field.form-field-email{
+            div.form-field.form-field-phone{
               margin-top: -90px;
               width: 100%;
 
@@ -881,6 +890,11 @@
     }
 }
 
+
 /* end contact page erb
    Author: Pasha
 */
+body.opera #contact-page-erb form label{
+  left:8%;
+  position:relative;
+} 
