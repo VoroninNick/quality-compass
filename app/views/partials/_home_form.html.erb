@@ -1,33 +1,40 @@
 <%= form_for @order, :url => orders_path(@order), :html => { method: 'post' } do |f| %>
-  <div class="form-field form-first-field">
+  <div class="form-field form-first-field form-title">
     <h2><%= t 'order_form.form_header' %></h2>
+    <div class="clearfix"></div>
   </div>
   <div class="form-field">
     <%= content_tag :span, '', :class => 'field-bg' %>
     <%= f.text_field :name, :placeholder => t('placeholders.name') %>
     <%= f.label t 'order_form.name' %>
+    <div class="clearfix"></div>
   </div>
   <div class="form-field">
     <%= content_tag :span, '', :class => 'field-bg' %>
     <%= f.text_field :company, :placeholder => t('placeholders.company') %>
     <%= f.label t 'order_form.company' %>
+    <div class="clearfix"></div>
   </div>
   <div class="form-field">
     <%= content_tag :span, '', :class => 'field-bg' %>
     <%= f.text_field :email, :placeholder => 'voronin.nick@gmail.com' %>
     <%= f.label t 'order_form.email' %>
+    <div class="clearfix"></div>
   </div>
   <div class="form-field">
     <%= content_tag :span, '', :class => 'field-bg' %>
     <%= f.text_field :phone, :placeholder => '+38 (050) 450 00 00' %>
     <%= f.label t 'order_form.phone' %>
+    <div class="clearfix"></div>
   </div>
   <div class="form-area">
     <%= content_tag :span, '', :class => 'field-bg' %>
     <%= f.text_area :body, :placeholder => t('placeholders.body') %>
     <%= f.label t 'order_form.body' %>
+    <div class="clearfix"></div>
   </div>
   <div class="submit-field">
     <%= f.submit t 'order_form.submit' %>
+    <div class="clearfix"></div>
   </div>
 <% end %>
