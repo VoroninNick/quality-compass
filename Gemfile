@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 gem 'rails_admin' #, :github => 'sferik/rails_admin'
+gem 'safe_yaml', :github => 'dtao/safe_yaml', :tag => '0.9.2'
 gem 'devise'
 gem 'fancybox-rails', :github => 'vikewoods/fancybox-rails'
 gem 'flexslider', :github => 'vikewoods/Flexslider-2-Rails-Gem'
