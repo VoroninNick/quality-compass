@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'bundler'
 gem 'rails', '3.2.13'
 gem 'rails_admin' #, :github => 'sferik/rails_admin'
 gem 'devise'
@@ -16,14 +15,12 @@ gem 'ckeditor'
 gem 'rename'
 gem 'globalize3'
 gem 'rails_admin_globalize', :github => 'voroninstudio/rails_admin_globalize'
-gem 'haml-rails'
 gem 'browser'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
-  gem 'modernizr-rails'
 end
 
 group :development do
