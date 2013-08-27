@@ -11,7 +11,7 @@ class Slide < ActiveRecord::Base
   attr_accessor :delete_avatar
   before_validation { self.avatar.clear if self.delete_avatar == '1' }
 
-  has_attached_file :avatar, :styles => { :thumb => '180>', :item => '600>' },
+  has_attached_file :avatar, :styles => { :thumb => '180>', :item => '600>', :to_display => '1620x420>' },
                     :url  => '/assets/banners/:id/:style/:basename.:extension',
                     :path => ':rails_root/public/assets/banners/:id/:style/:basename.:extension'
 

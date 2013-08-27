@@ -6,7 +6,7 @@
       <script type="text/javascript">
       $(document).ready(function() {
         $(".bg-img-<%= slide.id %>").css({
-          'background-image': 'url(<%= slide.avatar.url %>)'
+          'background-image': 'url(<%= slide.avatar.url(:to_display) %>)'
         });
       });
       </script>

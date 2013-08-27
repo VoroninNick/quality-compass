@@ -27,17 +27,17 @@
         <li class="subscribe-container"><%= link_to 'Subscribe ', subscribe_path, :title => 'Subscribe', :id => 'subscribe-link' %>
           <div id="send-request-overlay"></div>
           <div id="subscribe-form" style="display:none;">
-            <%= form_for @subscribe, :url => subscribe_path, :html => {:method => :post} do |f| %>
+            <%#= form_for @subscribe, :url => subscribe_path, :html => {:method => :post} do |f| %>
               <div class="field email">
-                <%= content_tag :span, '', :class => 'field-bg' %>
-                <%= f.text_field :email, :placeholder => 'nick@voroninstudio.eu',:data => { 
+                <%#= content_tag :span, '', :class => 'field-bg' %>
+                <%#= f.text_field :email, :placeholder => 'nick@voroninstudio.eu',:data => { 
                   :validation => "validate_email", 'validation-error-msg' => 'Your email address does not appear to be valid', :label => 'email' }  %>
-                <%= f.label 'email', :id => 'subscriber_email_err_msg' %>
+                <%#= f.label 'email', :id => 'subscriber_email_err_msg' %>
               </div>
               <div class="field submit">
-                <%= f.submit 'S'%>
+                <%#= f.submit 'S'%>
               </div>
-            <% end %>
+            <%# end %>
             <div class="clearfix"></div>
           </div>
         </li>

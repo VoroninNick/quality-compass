@@ -231,7 +231,7 @@
 .demo-2 .sl-slider h2,
 .demo-2 .sl-slider blockquote {
   
-  padding: 10px 30px 10px 30px;
+  padding: 10px 30px 00px 30px;
   //width: 80%;
   max-width: 960px;
   color: #fff;
@@ -248,10 +248,10 @@
   height: auto;
   width: auto;
   text-align:right;
-  max-width: 600px;
+  max-width: 460px;
 }
 .demo-2 .sl-slider h2 {
-  font-size: 64px;
+  font-size: 44px;
   font-weight: 700;
   //text-shadow: 0 -1px 0 rgba(0,0,0,0.2);
   //background-color: rgba(51,77,153,0.5);
@@ -262,13 +262,16 @@
 }
 
 .demo-2 .sl-slider blockquote {
-  font-size: 24px;
-  padding-top: 10px;
+  font-size: 20px;
+  line-height: 28px;
+  //padding-top: 10px;
   font-weight: 300;
   text-shadow: 0 -1px 0 rgba(0,0,0,0.2);
   
   p{
     text-align: right;
+    font-size: 22px !important;
+    margin-top: 0.25em !important;
     
   }
 }
@@ -284,19 +287,20 @@
 }
 
 .demo-2 .bg-img {
-  padding: 200px;
+  //padding: 200px;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   position: absolute;
-  top: -200px;
-  left: -200px;
+  //top: -200px;
+  //left: -200px;
   width: 100%;
   height: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  background-position: center center;
+  max-height: 400px;
+  //-webkit-background-size: cover;
+  //-moz-background-size: cover;
+  //background-size: cover;
+  //background-position: center center;
 }
 
 /* Custom navigation arrows */
