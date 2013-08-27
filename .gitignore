@@ -13,6 +13,7 @@
 
 /rails_admin
 /builds
+/vendor
 # Ignore the default SQLite database.
 
 # Ignore all logfiles and tempfiles.
